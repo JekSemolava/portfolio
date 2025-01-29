@@ -62,7 +62,7 @@ body{position:relative;}
 #header h3{color:#0a66c2;}
 #header .btn-dark {background-color: #0a66c2;font-size: 1.725rem;padding: 0;margin: 0;border-color:transparent;}
 #header button:hover {background-color: #000;}
-.gradient-background {background: linear-gradient(300deg, #70a4b9, #ece0e0, #87c18e);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: auto;width: auto;overflow: visible;position: relative;}
+.gradient-background {opacity:0.8; background: linear-gradient(300deg, #70a4b9, #ece0e0, #87c18e);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: auto;width: auto;overflow: visible;position: relative;}
 
 .pt-5 {padding-top: 5.125rem !important;}
 .display-5 {font-size: calc(1.25rem + 2.1vw);}
