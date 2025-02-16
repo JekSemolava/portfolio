@@ -1,4 +1,3 @@
-# Portfolio
 # Hi! I'm Jason Semolava
 
 #I hold a Bachelor's Degree in Electronics Engineering from Central Philippine University, and my educational background, combined with hands-on experience, has prepared me to excel in proficient and quality over quantity approach regarding tasks.
