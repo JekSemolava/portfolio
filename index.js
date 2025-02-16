@@ -19,7 +19,8 @@ function logout() {
 
 function login() {
   // window.location.href = "/login";
-  window.location.href = "/check";
+  //app.use(passwordCheck);
+  window.location.href = "/portfolio/public/check";
 }
 
 function passwordCheck(req, res, next) {
