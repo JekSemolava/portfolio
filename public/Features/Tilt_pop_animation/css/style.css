@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+:root {
+    --timing: 400ms;
+    --rotation: 45deg;
+}
+/* @KEYFRAMES*/
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+*{box-sizing: content-box;}
+h1,p{font-family: "Iceland", serif;color:#fff;}
+.text {width: 100%;max-width: 1200px;margin: 5rem auto 2rem;}
+.text h1{font-size:4rem;}
+.text p{font-size:2rem;}
+html {color-scheme: rgba(36, 36, 36, 0.864);}
+body {perspective: 1750px;background-color: #000;}
+
+.wrapper {position: relative;width: 100%;max-width: 1280px;height: auto;margin: auto;}
+/* .gradient-background {background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: auto;width: auto;overflow: visible;position: relative;} */
+.gradient-background {background: linear-gradient(300deg, #004a41, #1e5958, #a3626d);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: auto;width: auto;overflow: visible;position: relative;}
+
+
+.collection {display: flex;font-family: "Iceland", serif;width: 100%;margin: auto;justify-content: center;flex-wrap: wrap; }
+.lantern {width: 320px;aspect-ratio: 9/16;transform-style: preserve-3d;transition: rotate var(--timing) ease;margin: 1rem 1rem;}
+.lantern:hover {rotate: x var(--rotation);}
+.lantern::before {content: "";position: absolute;inset: 0;z-index: 100;background-image: radial-gradient(circle, transparent 50px, rgba(2, 36, 2, 0.826));opacity: 0;transition: opacity var(--timing);}
+.lantern:hover::before {opacity: 1;}
+.lantern::after {
+    content: "";
+    position: absolute;
+    inset: 80% 0.5rem 0.5rem;
+    translate: 0;
+    transform: translateZ(-100px);
+    background: black;
+    filter: blur(1rem);
+    z-index: 1;
+    transition:
+        rotate var(--timing),
+        translate var(--timing);
+}
+.lantern:hover::after {rotate: x calc(var(--rotation) * -1);translate: 0 60px;}
+.bg-image {position: absolute;z-index: 10;height: 100%;object-fit: cover;object-position: -50px center;}
+.logo,.front-image {position: absolute;opacity: 0;}
+.logo {z-index: 1000;width: 75%;margin-inline: auto;inset: auto 0 0;transform: translateY(4rem) translateZ(20px);transition: var(--timing);opacity: 1;}
+.lantern:hover .logo {transform: translateY(-2rem) translateZ(20px);rotate: x calc(var(--rotation) * -1);}
+.front-image {scale: 1;transform-origin: bottom;opacity: 0;z-index: 100;inset: auto 0 10rem;transition: var(--timing);}
+img {max-width: 100%;}
+.lantern:hover .front-image {opacity: 1;transform: translateY(-2rem) translateZ(1px);rotate: x calc(var(--rotation) * -1);inset: auto 0 10rem;}
