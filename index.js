@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 
 app.post("/portfolio/public/index", (req, res) => {
     if (userIsLoggedIn) {
-      res.sendFile(__dirname + "/portfolio/public/index.html");
+      res.sendFile(__dirname + "/public/index.html");
     } 
     else {
       res.sendFile(__dirname + "/public/login.html");
