@@ -89,7 +89,7 @@ app.get('/portfolio/public/index', (req, res) => {
   } else {
     res.redirect('/portfolio/public/login'); // Redirect to login if not logged in
   }
-
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
