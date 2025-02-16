@@ -13,7 +13,8 @@ app.use(express.static("public"));
 app.use(passwordCheck);
 
 function logout() {
-  window.location.href = "/logout";
+  // window.location.href = "/logout";
+  window.location.href = "/portfolio/public/login";
 }
 
 function passwordCheck(req, res, next) {
@@ -43,6 +44,11 @@ app.post("/check", (req, res) => {
   });
 
 app.get("/logout", (req, res) => {
+  userIsLoggedIn = false;
+  // res.redirect("/");
+  res.sendFile(__dirname + "/public/login.html");
+});
+app.get("/portfolio/public/login", (req, res) => {
   userIsLoggedIn = false;
   // res.redirect("/");
   res.sendFile(__dirname + "/public/login.html");
