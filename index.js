@@ -20,7 +20,7 @@ function logout() {
 function login() {
   // window.location.href = "/login";
   //app.use(passwordCheck);
-  window.location.href = "/portfolio/public/check";
+  window.location.href = "/portfolio/public/index";
 }
 
 function passwordCheck(req, res, next) {
