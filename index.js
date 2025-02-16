@@ -40,9 +40,9 @@ app.get("/", (req, res) => {
 });
 
 
-app.post("/portfolio/public/check", (req, res) => {
+app.post("/check", (req, res) => {
     if (userIsLoggedIn) {
-      res.sendFile(__dirname + "/public/index.html");
+      res.sendFile(__dirname + "/portfolio/public/index.html");
     } 
     /*else {
       res.sendFile(__dirname + "/public/login.html");
