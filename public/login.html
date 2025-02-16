@@ -21,11 +21,15 @@
           </div>
           <label for="password">Access:</label>
           <input type="text" id="password" name="password" required>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" id="logInButton" onclick="login()">
         </form>
       </div>
     </div>
   </section>
-  
+  <script>
+    function login() {
+      window.location.href = "/portfolio/public/index";
+  }
+  </script>
 </body>
 </html>
