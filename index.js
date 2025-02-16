@@ -72,10 +72,24 @@ app.get("/portfolio/public/login", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/portfolio/public/check", (req, res) => {
-  userIsLoggedIn = true;
-  res.sendFile(__dirname + "/portfolio/public/index.html");
+app.post('/portfolio/public/check', (req, res) => {
+  const password = req.body.password;
+  if (password === 'user123') {
+    userIsLoggedIn = true;
+    res.json({ success: true });
+  } else {
+    userIsLoggedIn = false;
+    res.json({ success: false });
+  }
 });
+
+app.get('/portfolio/public/index', (req, res) => {
+  if (userIsLoggedIn) {
+    res.sendFile(__dirname + '/public/index.html');
+  } else {
+    res.redirect('/portfolio/public/login'); // Redirect to login if not logged in
+  }
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
