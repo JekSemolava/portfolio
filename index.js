@@ -50,6 +50,15 @@ app.post("/portfolio/public/index", (req, res) => {
     }
   });
 
+app.post("/check", (req, res) => {
+    if (userIsLoggedIn) {
+      res.sendFile(__dirname + "/public/index.html");
+    } 
+    else {
+      res.sendFile(__dirname + "/public/login.html");
+    }
+  });
+
 app.get("/logout", (req, res) => {
   userIsLoggedIn = false;
   // res.redirect("/");
