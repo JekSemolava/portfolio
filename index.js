@@ -10,6 +10,7 @@ const port = 3000;
 var userIsLoggedIn = false;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+app.use(express.json());
 app.use(passwordCheck);
 
 function logout() {
