@@ -60,11 +60,10 @@ app.get("/portfolio/public/login", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/portfolio/public/index", (req, res) => {
+/*app.get("/portfolio/public/index", (req, res) => {
   userIsLoggedIn = true;
-  // res.redirect("/");
   res.sendFile(__dirname + "/public/index.html");
-});
+});*/
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
