@@ -52,10 +52,10 @@ app.post("/portfolio/public/index", (req, res) => {
 
 app.post("/check", (req, res) => {
     if (userIsLoggedIn) {
-      res.sendFile(__dirname + "/public/index.html");
+      res.sendFile(__dirname + "/index.html");
     } 
     else {
-      res.sendFile(__dirname + "/public/login.html");
+      res.sendFile(__dirname + "/login.html");
     }
   });
 
