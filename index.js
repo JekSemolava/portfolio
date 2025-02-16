@@ -43,9 +43,10 @@ app.get("/", (req, res) => {
 app.post("/check", (req, res) => {
     if (userIsLoggedIn) {
       res.sendFile(__dirname + "/public/index.html");
-    } else {
+    } 
+    /*else {
       res.sendFile(__dirname + "/public/login.html");
-    }
+    }*/
   });
 
 app.get("/logout", (req, res) => {
