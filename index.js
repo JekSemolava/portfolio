@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.post("/check", (req, res) => {
+app.post("/portfolio/public/check", (req, res) => {
     if (userIsLoggedIn) {
       res.sendFile(__dirname + "/public/index.html");
     } 
