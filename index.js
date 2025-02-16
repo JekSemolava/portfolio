@@ -36,7 +36,7 @@ function passwordCheck(req, res, next) {
 
 app.get("/", (req, res) => {
    if (userIsLoggedIn) {
-      res.sendFile(__dirname + "/public/index.html");
+      res.sendFile(__dirname + "/portfolio/public/index.html");
     }
 });
 
