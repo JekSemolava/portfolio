@@ -41,12 +41,13 @@ app.get("/", (req, res) => {
 
 
 app.post("/check", (req, res) => {
+    app.use(passwordCheck);
     if (userIsLoggedIn) {
       res.sendFile(__dirname + "/portfolio/public/index.html");
     } 
-    /*else {
+    else {
       res.sendFile(__dirname + "/public/login.html");
-    }*/
+    }
   });
 
 app.get("/logout", (req, res) => {
