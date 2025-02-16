@@ -17,6 +17,11 @@ function logout() {
   window.location.href = "/portfolio/public/login";
 }
 
+function login() {
+  // window.location.href = "/login";
+  window.location.href = "/portfolio/public/index";
+}
+
 function passwordCheck(req, res, next) {
     const password = req.body["password"];
     if (password === "user123") {
@@ -48,10 +53,17 @@ app.get("/logout", (req, res) => {
   // res.redirect("/");
   res.sendFile(__dirname + "/public/login.html");
 });
+
 app.get("/portfolio/public/login", (req, res) => {
   userIsLoggedIn = false;
   // res.redirect("/");
-  res.sendFile(__dirname + "/public/login.html");
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/portfolio/public/index", (req, res) => {
+  userIsLoggedIn = true;
+  // res.redirect("/");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.listen(port, () => {
