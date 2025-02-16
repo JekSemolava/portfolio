@@ -77,9 +77,11 @@ app.post('/portfolio/public/check', (req, res) => {
   if (password === 'user123') {
     userIsLoggedIn = true;
     res.json({ success: true });
+    res.sendFile(__dirname + "/index.html");
   } else {
     userIsLoggedIn = false;
     res.json({ success: false });
+    res.sendFile(__dirname + "/login.html");
   }
 });
 
