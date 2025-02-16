@@ -14,7 +14,7 @@ app.use(passwordCheck);
 
 function logout() {
   // window.location.href = "/logout";
-  window.location.href = "/login";
+  window.location.href = "/portfolio/public/login";
 }
 
 function login() {
