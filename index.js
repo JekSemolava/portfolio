@@ -14,13 +14,10 @@ app.use(express.json());
 app.use(passwordCheck);
 
 function logout() {
-  // window.location.href = "/logout";
   window.location.href = "/portfolio/public/login";
 }
 
 function login() {
-  // window.location.href = "/login";
-  //app.use(passwordCheck);
   window.location.href = "/portfolio/public/index";
 }
 
@@ -51,24 +48,13 @@ app.post("/portfolio/public/index", (req, res) => {
     }
   });
 
-/*app.post("/check", (req, res) => {
-    if (userIsLoggedIn) {
-      res.sendFile(__dirname + "/index.html");
-    } 
-    else {
-      res.sendFile(__dirname + "/login.html");
-    }
-  });*/
-
 app.get("/logout", (req, res) => {
   userIsLoggedIn = false;
-  // res.redirect("/");
   res.sendFile(__dirname + "/public/login.html");
 });
 
 app.get("/portfolio/public/login", (req, res) => {
   userIsLoggedIn = false;
-  // res.redirect("/");
   res.sendFile(__dirname + "/public/index.html");
 });
 
@@ -89,7 +75,7 @@ app.get('/portfolio/public/index', (req, res) => {
   if (userIsLoggedIn) {
     res.sendFile(__dirname + '/public/index.html');
   } else {
-    res.redirect('/portfolio/public/login'); // Redirect to login if not logged in
+    res.redirect('/portfolio/public/login');
   }
 });
 
