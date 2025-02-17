@@ -11,7 +11,7 @@
   <title>@jasonsemolava.</title>
 </head>
 
-<body>
+<!--<body>
   <section id="login">
     <div class="container">
     <div class="cover">
@@ -22,7 +22,7 @@
           <label for="password">Access:</label>
           <input type="text" id="password" name="password" required>
           <input type="submit" value="Submit">
-          <!--<input type="submit" value="Submit" id="logInButton" onclick="login()">-->
+          
         </form>
       </div>
     </div>
@@ -32,5 +32,45 @@
       window.location.href = "/portfolio/public/index";
   }
   </script>
+</body>-->
+
+<body>
+  <section id="login">
+    <div class="container">
+      <div class="cover">
+        <form id="loginForm">
+          <div class="login-logo btn-group my-4">
+            <h3>Jas<button type="button" class="btn btn-dark px-1 pb-1"><span>on</span></button></h3>
+          </div>
+          <label for="password">Access:</label>
+          <input type="password" id="password" name="password" required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simulating a password authentication process
+    const correctPassword = 'user123'; // Simulated correct password
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the form from submitting normally
+
+      const password = document.getElementById('password').value; // Get the entered password
+
+      if (password === correctPassword) {
+        // If the password is correct, redirect to the home page
+        window.location.href = '/portfolio/public/index';
+      } else {
+        // If the password is incorrect, show an alert
+        alert('Incorrect password. Please try again.');
+      }
+    });
+  </script>
 </body>
+  
 </html>
+
+
+
