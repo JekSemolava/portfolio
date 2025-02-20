@@ -9,4 +9,4 @@
 
 #I am now seeking new opportunities to continue growing professionally and contributing my skills to an innovative team like yours.
 
-#I am eager to bring my experience and passion for Web Development to Reliance BPO, and I look forward to the possibility of contributing to your team's continued success.
+#I am eager to bring my experience and passion for Web Development and I look forward to the possibility of contributing to your team's continued success.
