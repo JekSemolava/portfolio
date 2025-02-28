@@ -73,6 +73,65 @@ const validateFloor = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const saveBtn = document.getElementById("saveBtn");
+    // Sort state variables
+    let isNameAscending = true;
+    let isEmpIdAscending = true;
+    
+     // Toggle Sort by name function (A-Z / Z-A)
+     function sortByName() {
+        const table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+        const rows = Array.from(table.rows);
+        rows.sort((a, b) => {
+            const nameA = a.cells[1].innerHTML.toLowerCase();
+            const nameB = b.cells[1].innerHTML.toLowerCase();
+            return isNameAscending
+                ? nameA.localeCompare(nameB)  // Ascending order
+                : nameB.localeCompare(nameA); // Descending order
+        });
+        rows.forEach(row => table.appendChild(row)); // Reorder rows in table
+
+        // Toggle the sort order for next click
+        isNameAscending = !isNameAscending;
+
+        // Update the icon based on the sort order
+        const sortButton = document.getElementById("sortByName");
+        const icon = document.getElementById("nameSortIcon");
+        if (isNameAscending) {
+            icon.src = "./images/up.png";  // Ascending icon
+        } else {
+            icon.src = "./images/down.png"; // Descending icon
+        }
+    }
+
+    // Toggle Sort by employee number (low to high / high to low)
+    function sortByEmpId() {
+        const table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+        const rows = Array.from(table.rows);
+        rows.sort((a, b) => {
+            const empIdA = parseInt(a.cells[0].innerHTML, 10);
+            const empIdB = parseInt(b.cells[0].innerHTML, 10);
+            return isEmpIdAscending
+                ? empIdA - empIdB // Ascending order
+                : empIdB - empIdA; // Descending order
+        });
+        rows.forEach(row => table.appendChild(row)); // Reorder rows in table
+
+        // Toggle the sort order for next click
+        isEmpIdAscending = !isEmpIdAscending;
+
+        // Update the icon based on the sort order
+        const sortButton = document.getElementById("sortByEmpId");
+        const icon = document.getElementById("empSortIcon");
+        if (isEmpIdAscending) {
+            icon.src = "./images/up.png";  // Ascending icon
+        } else {
+            icon.src = "./images/down.png"; // Descending icon
+        }
+    }
+
+    // Event listeners for sort buttons
+    document.getElementById("sortByName").addEventListener("click", sortByName);
+    document.getElementById("sortByEmpId").addEventListener("click", sortByEmpId);
     
     if (saveBtn) {
         saveBtn.addEventListener("click", () => {
