@@ -28,6 +28,9 @@ label.validation-error{ color:var(--bs-tertiary); margin-left:5px;}
 #employeeList {position: absolute;top: 0;width: 100%;display: block;overflow-y: auto;height: 450px;}
 form div.form-action-buttons{text-align:center;}
 #employeeList th, #employeeList td {width: 25%;}
+#employeeList th {   position: relative; }
+#employeeList button {border: none;width: 20px;height: 13px;padding: 0px 2px 5px;margin: 0 0 17px;position: absolute;background-color: var(--bs-secondary);}
+#employeeList button img {width: 100%;background-color: var(--bs-secondary);padding: 0;margin: 0;}
 #employeeList thead tr {position: sticky;top: 0;}
 #loadDataImg img{width: 100%;width: 100%;max-width: 30px;margin: 0 10px 20px;height: auto;min-height: 30px;}
 .hint-alert {position: fixed;top: 10px;left: 50%;transform: translateX(-50%);background-color: var(--other-green);color: var(--bs-primary);padding: 10px 20px;border-radius: 5px;font-size: 16px;display: none; z-index: 1000;max-width: 400px;width: 90%;}
