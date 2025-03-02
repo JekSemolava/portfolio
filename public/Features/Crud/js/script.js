@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     empId: row.cells[0].innerHTML,
                     fullName: row.cells[1].innerHTML,
                     title: row.cells[2].innerHTML,
-                    floor: row.cells[3].innerHTML
+                    dateHired: row.cells[3].innerHTML
                 });
             }
 
