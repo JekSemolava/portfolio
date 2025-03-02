@@ -1,32 +1,19 @@
 let selectedRow = null;
 
-/*const onFormSubmit = () => {
+const onFormSubmit = () => {
     if (validateName()) {
         const formData = readFormData();
         selectedRow ? updateRecord(formData) : insertNewRecord(formData);
         resetForm();
         showHint("Form submitted successfully!", "success");
     }
-};*/
-
-/*document.addEventListener("DOMContentLoaded", () => {*/
-    /*const form = document.getElementById("employeeForm");*/
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    onFormSubmit();
-    if (validateName()) {
-        const formData = readFormData();
-        selectedRow ? updateRecord(formData) : insertNewRecord(formData);
-        resetForm();
-        showHint("Form submitted successfully!", "success");
-    }
-});
-
+};
 
 const readFormData = () => ({
     empId: document.getElementById("empId").value,
     fullName: document.getElementById("fullName").value,
     title: document.getElementById("title").value,
+    // floor: document.getElementById("floor").value
     dateHired: document.getElementById("dateHired").value
 });
 
@@ -34,7 +21,8 @@ const insertNewRecord = data => {
     const table = document.getElementById("employeeList").querySelector('tbody');
     const newRow = table.insertRow();
     Object.values(data).forEach((value, i) => newRow.insertCell(i).innerHTML = value);
-    newRow.insertCell(4).innerHTML = `<input type="text" class="datepicker" value="${data.dateHired}" onclick="showCalendar(this)">`;
+    // newRow.insertCell(4).innerHTML = `<a onclick="onEdit(this)">Edit</a> <a onclick="onDelete(this)">Delete</a>`;
+    newRow.insertCell(4).innerHTML = `<input type="text" class="datepicker" value="${data.dateHired}" onclick="showCalendar(this)">`; // Add date input field
     newRow.insertCell(5).innerHTML = `<a onclick="onEdit(this)">Edit</a> <a onclick="onDelete(this)">Delete</a>`;
 };
 
@@ -76,6 +64,15 @@ const validateEmployeeNumber = () => {
         empId.setCustomValidity("");
     }
 };
+
+// const validateFloor = () => {
+//     const floor = document.getElementById("floor");
+//     if (floor.value.length > 2 || isNaN(floor.value)) {
+//         floor.setCustomValidity("Please enter a valid number (max 2 digits).");
+//     } else {
+//         floor.setCustomValidity("");
+//     }
+// };
 
 document.addEventListener("DOMContentLoaded", () => {
     const saveBtn = document.getElementById("saveBtn");
@@ -134,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             icon.src = "./images/down.png"; // Descending icon
         }
+    }
 
     // Toggle Sort by date hired function
     function sortByDateHired() {
@@ -159,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             icon.src = "./images/down.png"; // Descending icon
         }
-    }
     }
 
     // Event listeners for sort buttons
@@ -242,5 +239,5 @@ const showHint = (message, type = 'success') => {
 };
 
 function showCalendar(input) {
-    input.type = 'date';
+    input.type = 'date'; // This makes the browser show the date picker when clicked
 }
