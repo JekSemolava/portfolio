@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sort state variables
     let isNameAscending = true;
     let isEmpIdAscending = true;
+    let isDateHiredAscending = true;
     
      // Toggle Sort by name function (A-Z / Z-A)
      function sortByName() {
