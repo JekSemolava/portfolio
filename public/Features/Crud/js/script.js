@@ -9,9 +9,9 @@ let selectedRow = null;
     }
 };*/
 
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {*/
     /*const form = document.getElementById("employeeForm");*/
-    form.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     onFormSubmit();
     if (validateName()) {
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         resetForm();
         showHint("Form submitted successfully!", "success");
     }
-    });
 });
+
 
 const readFormData = () => ({
     empId: document.getElementById("empId").value,
