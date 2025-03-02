@@ -16,7 +16,8 @@
         <table id="EmployeeTable">
             <tr>
                 <td class="formsheet" id="formSheet">
-                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <!--<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">-->
+                    <form id="employeeForm" autocomplete="off">
                         <div>
                             <label>Employee Number</label>
                             <input type="number" name="empId" id="empId" oninput="validateEmployeeNumber()" maxlength="6" minLength="6">
