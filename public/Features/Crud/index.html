@@ -30,8 +30,8 @@
                             <input type="text" name="title" id="title">
                         </div>
                         <div>
-                            <label>Floor</label>
-                            <input type="number" name="floor" id="floor" oninput="validateFloor()" maxlength="2">
+                            <label>Date Hired</label>
+                            <input type="date" class="datepicker" id="dateHired" name="dateHired" />
                         </div>
                         <div class="form-action-buttons">
                             <button type="button" class="btn btn-dark"><input type="submit" value="Submit"></button>
@@ -46,7 +46,7 @@
                                     <th>Employee <button id="sortByEmpId" class="btn btn-light"><img id="empSortIcon" src="./images/down.png"></button></th>
                                     <th>Name <button id="sortByName" class="btn btn-light"><img id="nameSortIcon" src="./images/down.png"></button></th>
                                     <th>Job Title</th>
-                                    <th>Floor</th>
+                                    <th>Date<button id="sortByDateHired" class="btn btn-light"><img id="dateHiredSortIcon" src="./images/down.png"></button></th>
                                     <th></th>
                                 </tr>
                             </thead>
