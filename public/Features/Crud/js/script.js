@@ -10,19 +10,17 @@ let selectedRow = null;
 };*/
 
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("employeeForm");
+    /*const form = document.getElementById("employeeForm");*/
     form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        onFormSubmit();
-        if (validateName()) {
+    event.preventDefault();
+    onFormSubmit();
+    if (validateName()) {
         const formData = readFormData();
         selectedRow ? updateRecord(formData) : insertNewRecord(formData);
         resetForm();
         showHint("Form submitted successfully!", "success");
     }
     });
-
-    // other code...
 });
 
 const readFormData = () => ({
