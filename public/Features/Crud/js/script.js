@@ -13,31 +13,32 @@ const readFormData = () => ({
     empId: document.getElementById("empId").value,
     fullName: document.getElementById("fullName").value,
     title: document.getElementById("title").value,
-    floor: document.getElementById("floor").value
+    dateHired: document.getElementById("dateHired").value
 });
 
 const insertNewRecord = data => {
     const table = document.getElementById("employeeList").querySelector('tbody');
     const newRow = table.insertRow();
     Object.values(data).forEach((value, i) => newRow.insertCell(i).innerHTML = value);
-    newRow.insertCell(4).innerHTML = `<a onclick="onEdit(this)">Edit</a> <a onclick="onDelete(this)">Delete</a>`;
+    newRow.insertCell(4).innerHTML = `<input type="text" class="datepicker" value="${data.dateHired}" onclick="showCalendar(this)">`;
+    newRow.insertCell(5).innerHTML = `<a onclick="onEdit(this)">Edit</a> <a onclick="onDelete(this)">Delete</a>`;
 };
 
 const resetForm = () => {
-    ["empId", "fullName", "title", "floor"].forEach(id => document.getElementById(id).value = "");
+    ["empId", "fullName", "title", "dateHired"].forEach(id => document.getElementById(id).value = "");
     selectedRow = null;
 };
 
 const onEdit = td => {
     selectedRow = td.closest('tr');
-    ["empId", "fullName", "title", "floor"].forEach((id, i) => document.getElementById(id).value = selectedRow.cells[i].innerHTML);
+    ["empId", "fullName", "title", "dateHired"].forEach((id, i) => document.getElementById(id).value = selectedRow.cells[i].innerHTML);
 };
 
 const updateRecord = formData => {
     selectedRow.cells[0].innerHTML = formData.empId;
     selectedRow.cells[1].innerHTML = formData.fullName;
     selectedRow.cells[2].innerHTML = formData.title;
-    selectedRow.cells[3].innerHTML = formData.floor;
+    selectedRow.cells[3].innerHTML = formData.dateHired;
 };
 
 const onDelete = td => {
@@ -59,15 +60,6 @@ const validateEmployeeNumber = () => {
         empId.setCustomValidity("Employee Number must be 6 digits.");
     } else {
         empId.setCustomValidity("");
-    }
-};
-
-const validateFloor = () => {
-    const floor = document.getElementById("floor");
-    if (floor.value.length > 2 || isNaN(floor.value)) {
-        floor.setCustomValidity("Please enter a valid number (max 2 digits).");
-    } else {
-        floor.setCustomValidity("");
     }
 };
 
@@ -127,11 +119,38 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             icon.src = "./images/down.png"; // Descending icon
         }
+
+    // Toggle Sort by date hired function
+    function sortByDateHired() {
+        const table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+        const rows = Array.from(table.rows);
+        rows.sort((a, b) => {
+            const nameA = a.cells[1].innerHTML.toLowerCase();
+            const nameB = b.cells[1].innerHTML.toLowerCase();
+            return isDateHiredAscending
+                ? nameA.localeCompare(nameB)  // Ascending order
+                : nameB.localeCompare(nameA); // Descending order
+        });
+        rows.forEach(row => table.appendChild(row)); // Reorder rows in table
+
+        // Toggle the sort order for next click
+        isDateHiredAscending = !isDateHiredAscending;
+
+        // Update the icon based on the sort order
+        const sortButton = document.getElementById("sortByDateHired");
+        const icon = document.getElementById("dateHiredSortIcon");
+        if (isDateHiredAscending) {
+            icon.src = "./images/up.png";  // Ascending icon
+        } else {
+            icon.src = "./images/down.png"; // Descending icon
+        }
+    }
     }
 
     // Event listeners for sort buttons
     document.getElementById("sortByName").addEventListener("click", sortByName);
     document.getElementById("sortByEmpId").addEventListener("click", sortByEmpId);
+    document.getElementById("sortByDateHired").addEventListener("click", sortByDateHired);
     
     if (saveBtn) {
         saveBtn.addEventListener("click", () => {
@@ -206,3 +225,7 @@ const showHint = (message, type = 'success') => {
     hintBox.classList.replace('hide', 'show');
     setTimeout(() => hintBox.classList.replace('show', 'hide'), 3000);
 };
+
+function showCalendar(input) {
+    input.type = 'date';
+}
