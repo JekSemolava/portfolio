@@ -212,12 +212,6 @@ document.getElementById("loadDataBtn").addEventListener("click", () => {
                         jsonData.employees.forEach(employee => insertNewRecord(employee));
                     } else {
                         alert(`"Invalid JSON format. 'employees' key is missing."
-                            {
-                            "employees":[
-                                {
-                                "empId":12345,
-                                ...}
-                            ]
                         }`);
                     }
                 } catch (err) {
