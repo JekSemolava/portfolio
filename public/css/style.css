@@ -106,6 +106,7 @@ body{position:relative;}
 .socmed-icons.list-unstyled img {width: 100%;max-width: 50px;height: auto;margin: auto 0;height: auto;min-height: 50px;}
 
 /* FEATURES */
+#features h2 {padding-left: 6rem;}
 #features{}
 #writeup .text {width: 100%;}
 #writeup .text span{display:block; font-size:1rem;}
