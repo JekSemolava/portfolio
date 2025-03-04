@@ -1,0 +1,149 @@
+{
+  "timestamp": "2025-03-03T17:04:17.942Z",
+  "employees": [
+    {
+      "empId": "748596",
+      "fullName": "Jek Semolava",
+      "title": "Web Developer",
+      "dateHired": "1990-08-24"
+    },
+    {
+      "empId": "262407",
+      "fullName": "Avicii",
+      "title": "Artist",
+      "dateHired": "2010-12-05"
+    },
+    {
+      "empId": "835826",
+      "fullName": "Pharell Williams",
+      "title": "Artist",
+      "dateHired": "1997-08-12"
+    },
+    {
+      "empId": "702725",
+      "fullName": "Ariana Grande",
+      "title": "Artist",
+      "dateHired": "2005-07-29"
+    },
+    {
+      "empId": "015266",
+      "fullName": "Calvin Harris",
+      "title": "Artist",
+      "dateHired": "2019-11-01"
+    },
+    {
+      "empId": "371735",
+      "fullName": "Taylor Swift",
+      "title": "Artist",
+      "dateHired": "2000-10-08"
+    },
+    {
+      "empId": "233676",
+      "fullName": "Bruno Mars",
+      "title": "Artist",
+      "dateHired": "2002-09-13"
+    },
+    {
+      "empId": "288417",
+      "fullName": "Travis Scott",
+      "title": "Artist",
+      "dateHired": "2014-02-16"
+    },
+    {
+      "empId": "786670",
+      "fullName": "Harry Styles",
+      "title": "Artist",
+      "dateHired": "2005-01-27"
+    },
+    {
+      "empId": "976737",
+      "fullName": "Don Omar",
+      "title": "Artist",
+      "dateHired": "1982-04-30"
+    },
+    {
+      "empId": "221176",
+      "fullName": "Dua Lipa",
+      "title": "Artist",
+      "dateHired": "2004-06-05"
+    },
+    {
+      "empId": "686683",
+      "fullName": "Hozier",
+      "title": "Artist",
+      "dateHired": "2011-04-03"
+    },
+    {
+      "empId": "529875",
+      "fullName": "Doja Cat",
+      "title": "Artist",
+      "dateHired": "2002-07-19"
+    },
+    {
+      "empId": "034566",
+      "fullName": "Usher",
+      "title": "Artist",
+      "dateHired": "1983-05-23"
+    },
+    {
+      "empId": "637620",
+      "fullName": "Billie Eilish",
+      "title": "Artist",
+      "dateHired": "2001-04-01"
+    },
+    {
+      "empId": "069466",
+      "fullName": "Eminem",
+      "title": "Artist",
+      "dateHired": "1980-12-28"
+    },
+    {
+      "empId": "394492",
+      "fullName": "Shawn Mendes",
+      "title": "Artist",
+      "dateHired": "2017-11-04"
+    },
+    {
+      "empId": "586275",
+      "fullName": "Coldplay",
+      "title": "Artist",
+      "dateHired": "1971-03-08"
+    },
+    {
+      "empId": "891177",
+      "fullName": "Imagine Dragon",
+      "title": "Artist",
+      "dateHired": "1992-02-14"
+    },
+    {
+      "empId": "884928",
+      "fullName": "Kesha",
+      "title": "Artist",
+      "dateHired": "1980-05-16"
+    },
+    {
+      "empId": "224797",
+      "fullName": "Tom Odelle",
+      "title": "Artist",
+      "dateHired": "2014-04-12"
+    },
+    {
+      "empId": "626838",
+      "fullName": "Ed Sheeran",
+      "title": "Artist",
+      "dateHired": "2013-03-07"
+    },
+    {
+      "empId": "871061",
+      "fullName": "Arctic Monkeys",
+      "title": "Artist",
+      "dateHired": "2012-07-09"
+    },
+    {
+      "empId": "917428",
+      "fullName": "Lana Del Rey",
+      "title": "Artist",
+      "dateHired": "2010-06-11"
+    }
+  ]
+}
