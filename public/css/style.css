@@ -121,7 +121,7 @@ body{position:relative;}
 
 /* Experience */
 #experience{background-color: #ece0e0;}
-.rounded-circle{border-radius: 50% !important;width: 100%;max-width: 150px;height: auto;max-height: 150px;}
+.rounded-circle{border-radius: 50% !important;width: 100%;max-width: 16vw;height: auto;max-height: 30vh;}
 #icon-grid2 {display: flex;gap: 2rem;justify-content: center;}
 #experience figcaption span{display:block;}
 #icon-grid2 figure img {width: 100%;max-width: 200px;height: auto;}
