@@ -211,8 +211,7 @@ document.getElementById("loadDataBtn").addEventListener("click", () => {
                         tableBody.innerHTML = "";
                         jsonData.employees.forEach(employee => insertNewRecord(employee));
                     } else {
-                        alert(`"Invalid JSON format. 'employees' key is missing."
-                        }`);
+                        alert(`"Invalid JSON format."`);
                     }
                 } catch (err) {
                     showHint("Error reading the JSON file: " + err.message, "error");
