@@ -13,6 +13,7 @@
     .card-body button {position: absolute;display:block; bottom: 0; max-width: unset;left:0}
     .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
     .feature-projects .shadow-sm {min-height: unset;}
+    #features h2 {padding-left: 0;text-align: center;}
   }
   
   @media only screen and (max-width: 1000px) {
