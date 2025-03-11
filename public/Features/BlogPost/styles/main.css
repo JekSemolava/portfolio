@@ -1,0 +1,33 @@
+:root{
+  /* --code: #hex; */
+  --bs-primary: #fff;
+  --bs-secondary: #e1e1e1;/*same with gray : #dddd*/
+  --bs-tertiary: #ff0000;
+  
+  --other-green:#4CAF50;
+  --other-blue:#1b7ad9;
+  --other-dblue:#032f5cf1;
+  }
+
+
+body {font-family: "Poppins";background-color: #f4f4f4;margin: 0;padding: 0;}
+.container {width: 100%;margin: 5rem auto;background-color: #c1c1c1;padding: 0;border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);max-width: 1200px;}
+h1 {text-align: center;color: #333;}
+
+#testimonialCard h1 {padding: .5rem;margin: 0;}
+.card-body{padding: 1.5rem;}
+
+#testimonial-list {width: 100%;max-width: unset;}
+.testimonial {border-bottom: 1px solid #ddd;padding: 1rem .75rem 2.25rem;position: relative;overflow:auto; max-height:135px;}
+
+.testimonial p {font-size: 16px;color: #555; margin:.5rem;}
+.testimonial .edit-btn {background-color: var(--other-blue);color: white;padding: 5px 10px;border: none;cursor: pointer;border-radius: 4px;float:right;}
+.testimonial .edit-btn:hover {background-color:var(--other-dblue);}
+.form-section {margin-top: 30px;}
+textarea {width: 100%;height: 100px;padding: 10px;border: 1px solid #ddd;border-radius: 4px;margin-bottom: 10px;font-size: 16px;}
+button {color: white;padding: 10px 20px;border: none;cursor: pointer;border-radius: 4px;}
+button:hover {background-color: var(--other-dblue);}
+
+
+.testimonial .delete-btn {background-color: #f44336;color: white;padding: 5px 10px;border: none;cursor: pointer;border-radius: 4px;margin-left: 10px;float:right;}
+.testimonial .delete-btn:hover {background-color: #e53935;}
