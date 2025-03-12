@@ -18,7 +18,7 @@ h1 {text-align: center;color: #333;}
 .card-body{padding: 1.5rem;}
 
 #testimonial-list {width: 100%;max-width: unset;}
-.testimonial {border-bottom: 1px solid #ddd;padding: 1rem .75rem 2.25rem;position: relative;overflow:auto; max-height:135px;}
+.testimonial {border-bottom: 1px solid #ddd;padding: 1rem .75rem 2.25rem;position: relative;overflow:auto; height:140px;}
 
 .testimonial p {font-size: 16px;color: #555; margin:.5rem;}
 .btn-grp {position: absolute;top: 1.25rem;float: right;right: 0;}
