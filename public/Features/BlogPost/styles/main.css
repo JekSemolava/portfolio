@@ -21,6 +21,7 @@ h1 {text-align: center;color: #333;}
 .testimonial {border-bottom: 1px solid #ddd;padding: 1rem .75rem 2.25rem;position: relative;overflow:auto; max-height:135px;}
 
 .testimonial p {font-size: 16px;color: #555; margin:.5rem;}
+.btn-grp {position: absolute;top: 1.25rem;float: right;right: 0;}
 .testimonial .edit-btn {background-color: var(--other-blue);color: white;padding: 5px 10px;border: none;cursor: pointer;border-radius: 4px;float:right;}
 .testimonial .edit-btn:hover {background-color:var(--other-dblue);}
 .form-section {margin-top: 30px;}
@@ -31,3 +32,6 @@ button:hover {background-color: var(--other-dblue);}
 
 .testimonial .delete-btn {background-color: #f44336;color: white;padding: 5px 10px;border: none;cursor: pointer;border-radius: 4px;margin-left: 10px;float:right;}
 .testimonial .delete-btn:hover {background-color: #9e1b19;}
+textarea{margin-top: 15px;}
+.testimonial strong {color: var(--other-blue);}
+.testimonial em {font-weight: 600;font-size: .9rem;color: var(--other-green);}
