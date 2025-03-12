@@ -16,38 +16,39 @@ function loadTestimonials() {
     });
 }
 
-// Add a new testimonial
+// Add a new testimonial or update an existing one
 document.getElementById('post-btn').addEventListener('click', () => {
     const testimonialText = document.getElementById('testimonial-text').value.trim();
 
     if (testimonialText) {
         const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
-        testimonials.push({ text: testimonialText });
+        
+        if (editingIndex !== null) {  // Check if we're editing an existing testimonial
+            testimonials[editingIndex].text = testimonialText;  // Update the testimonial text
+            editingIndex = null;  // Reset editingIndex after updating
+            document.getElementById('post-btn').textContent = 'Post'; // Reset button text
+        } else {
+            testimonials.push({ text: testimonialText });  // Add a new testimonial
+        }
+
         localStorage.setItem('testimonials', JSON.stringify(testimonials));
-        document.getElementById('testimonial-text').value = ''; // Clear textarea
-        loadTestimonials(); // Reload testimonials
+        document.getElementById('testimonial-text').value = '';  // Clear textarea
+        loadTestimonials();  // Reload testimonials after adding or updating
     }
 });
 
 // Edit an existing testimonial
+let editingIndex = null; // Track the index of the testimonial being edited
+
 function editTestimonial(index) {
     const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
     const testimonialText = testimonials[index].text;
 
     document.getElementById('testimonial-text').value = testimonialText;
+    editingIndex = index; // Set the index to the testimonial being edited
 
-    // Update the testimonial after editing
-    document.getElementById('post-btn').textContent = 'Update Testimonial';
-    document.getElementById('post-btn').onclick = function () {
-        const updatedText = document.getElementById('testimonial-text').value.trim();
-        if (updatedText) {
-            testimonials[index].text = updatedText;
-            localStorage.setItem('testimonials', JSON.stringify(testimonials));
-            document.getElementById('testimonial-text').value = '';
-            document.getElementById('post-btn').textContent = 'Post Testimonial';
-            loadTestimonials();
-        }
-    };
+    // Change the button text to 'Update Testimonial'
+    document.getElementById('post-btn').textContent = 'Update';
 }
 
 // Delete a testimonial
