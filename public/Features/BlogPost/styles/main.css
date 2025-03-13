@@ -34,4 +34,4 @@ button:hover {background-color: var(--other-dblue);}
 .testimonial .delete-btn:hover {background-color: #9e1b19;}
 textarea{margin-top: 15px;}
 .testimonial strong {color: var(--other-blue);}
-.testimonial em {font-weight: 600;font-size: .9rem;color: var(--other-green);}
+.testimonial em {font-weight: 600;font-size: .7rem;color: #d2d2d2;}
