@@ -113,11 +113,11 @@ body{position:relative;}
 .col.d-flex.align-items-start p {font-size: .85rem !important;}
 .col.d-flex.align-items-start svg {   padding: .355rem;   background-color: #d0c5c5;   border-radius: 20px; }
 .feature-projects img {width: 100%;height: auto;}
-.feature-projects .shadow-sm {overflow: hidden;width: 100%;height: auto;min-height: 325px;}
+.feature-projects .shadow-sm {overflow: hidden;width: 100%;height: auto;min-height: 400px;}
 .feature-projects .shadow-sm mark a{color:#fc5069;}
 .feature-projects .shadow-sm a{color:#fff;}
 .card.shadow-sm figure {width: 100%;height: auto;max-height: 180px;overflow: hidden;}
-.btn-group {position: absolute;bottom: 1rem;display:block;}
+.btn-group {position: absolute;bottom: 1rem;display:flex;}
 
 /* Experience */
 #experience{background-color: #ece0e0;}
