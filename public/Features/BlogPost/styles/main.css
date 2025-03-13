@@ -11,7 +11,7 @@
 
 
 body {font-family: "Poppins";background-color: #f4f4f4;margin: 0;padding: 0;}
-.container {width: 100%;margin: 5rem auto;background-color: #c1c1c1;padding: 0;border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);max-width: 1200px;}
+.container {width: 100%;margin: 1.25rem auto;background-color: #c1c1c1;padding: 0;border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);max-width: 1200px;}
 h1 {text-align: center;color: #333;}
 
 #testimonialCard h1 {padding: .5rem;margin: 0;}
@@ -34,4 +34,5 @@ button:hover {background-color: var(--other-dblue);}
 .testimonial .delete-btn:hover {background-color: #9e1b19;}
 textarea{margin-top: 15px;}
 .testimonial strong {color: var(--other-blue);}
+#star-rating {margin: .25rem;}
 .testimonial em {font-weight: 600;font-size: .7rem;color: #d2d2d2;}
