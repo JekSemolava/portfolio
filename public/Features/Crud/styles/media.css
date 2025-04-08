@@ -1,0 +1,9 @@
+/* WEB RESPONSIVENESS */
+@media only screen and (max-width: 800px) {
+#saveBtn {background-color: #0064ff96;}
+/* #employeeList thead th {width: 100%;min-width: 125px;overflow: auto;} */
+}
+
+@media only screen and (max-width: 500px) {
+body{margin: 7vh 0;}
+}
