@@ -1,7 +1,0 @@
-/* WEB RESPONSIVENESS */
-@media (max-width: 600px) {
-    .testimonial .delete-btn {padding: 5px 10px;font-size: 20px;}
-}
-@media (max-width: 500px) {
-    .testimonial span {display: flex;}
-}
