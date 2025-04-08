@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+<section id="footer" class="gradient-background">
+    <div class="container ">
+      <footer class="row row-cols-1 row-cols-sm-2 py-5 pt-5 mt-5">
+        
+          <div class="col mb-2">
+            <h3>Services</h3>
+            <div class="ftr_nav_services_con">
+              <div class="menu-footer-nav-services-container">
+                <ul class="list-unstyled menu" id="menu-footer-nav-services">
+                  <li class="menu-item menu-item-type-post_type">Custom Website Modifications</li>
+                </ul>
+              </div>
+            </div>
+            <h3 class="other_sevices_title">OTHER SERVICE</h3>
+            <div class="ftr_nav_other_services_con">
+              <div class="menu-other-services-container">
+                <ul class="list-unstyled menu" id="menu-other-services" class="menu">
+                  <li class="menu-item menu-item-type-post_type">Webpage Implementation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-2">
+            <div class="phone">
+              <h3>Phone</h3>
+              <ul class="list-unstyled">
+                <li><mark><a href="tel:+639927246313" class="">+63 (992) 724-6313</a></mark> </li>
+                <li><mark><a href="tel:+639452450768" class="">+63 (945) 245-0768</a></mark> </li>
+              </ul>
+            </div>
+            <div class="email">
+              <h3>Email</h3>
+              <ul class="list-unstyled">
+                <li><a href="mailto:jason.semolava@gmail.com">jason.semolava@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <button id="backToTop" class="btn btn-dark">Top</button>
+          </div>
+
+      </footer>
+
+      <div class="footer_logo_copyright">
+        <div class="footer_logo">
+            <h3>Jason Semolava</h3>          
+        </div>
+
+        <div class="copyright">
+          <div class="copyright_text">
+            <h3>© Copyright 2025 <small>•</small> <span>All Rights Reserved</span></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let backToTopButton = document.getElementById('backToTop');
+    const texts = [
+      'Hi! Nice to Meet You . . .',
+      'I am an aspiring and self-taught Frontend Developer . . .|'
+  ];
+  let line = 0;
+  let wordIndex = 0;
+  let isDeleting = false;
+  let currentText = '';
+  
+  function typeText() {
+      const currentLine = texts[line];
+      const words = currentLine.split(' ');
+      if (isDeleting) {
+          currentText = words.slice(0, wordIndex).join(' ');
+          if (wordIndex > 0) {
+              setTimeout(wordIndex--, 2500);
+          } else {
+              isDeleting = false;
+          }
+      } else {
+          currentText = words.slice(0, wordIndex + 1).join(' ');
+          if (wordIndex === words.length - 1) {
+              isDeleting = true;
+          } else {
+              setTimeout(wordIndex++, 4000);
+          }
+      }
+  
+      document.getElementById('textAnimation').textContent = currentText;
+  
+      if (isDeleting && wordIndex === 0) {
+          isDeleting = false;
+          line = (line + 1) % texts.length;
+          wordIndex = 0;
+          setTimeout(typeText, 4000);
+          return;
+      }
+  
+      const speed = isDeleting ? 75 : 200;
+      setTimeout(typeText, speed);
+  }
+  typeText();
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  });
+
+
+</script>
+<link rel="stylesheet" href="../public/styles/style.css">
+  <link rel="stylesheet" href="../public/css/media.css">
+
+</body>
+</html>
