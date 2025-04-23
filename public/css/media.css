@@ -29,6 +29,7 @@
   
   @media only screen and (max-width: 800px) {
     #footer h3 {text-align:center;}
+    #introduction object {width: 100%;max-width: fit-content;display: block;}
   }
   
   @media only screen and (max-width: 768px) {
