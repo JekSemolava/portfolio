@@ -1,4 +1,8 @@
 /* WEB RESPONSIVENESS */
+@media only screen and (max-width: 1400px) {
+  #login form {padding: 55vh 1.5vw;}
+}
+
 @media only screen and (max-width: 1200px) {
   .align-items-center{max-width:800px;}
   #skills .container .row .col .card .card-body {min-height: 250px;}
