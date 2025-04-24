@@ -29,14 +29,11 @@
 @media only screen and (max-width: 800px) {
     #footer h3 {text-align:center;}
     #introduction object {width: 100%;max-width: fit-content;display: block;}
-    #login .container object {width: 100%;max-width: 300px;position: absolute;top: 0;right: 3rem;}
+    #login .container object {display:none;}
   }
 @media only screen and (max-width: 768px) {
     #skills .container .row .col .card .card-body {min-height: 200px;}
   }
-@media only screen and (max-width: 700px) {
-  #login .container object {display:none;}
-}
 @media only screen and (max-width: 576px) {
     #footer h3 {text-align:left;}
     .card-body .btn-group button {font-size: 14px;}
