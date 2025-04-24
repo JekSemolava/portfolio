@@ -2,7 +2,6 @@
 @media only screen and (max-width: 1400px) {
   #login form {padding: 55vh 1.5vw;}
 }
-
 @media only screen and (max-width: 1200px) {
   .align-items-center{max-width:800px;}
   #skills .container .row .col .card .card-body {min-height: 250px;}
@@ -14,37 +13,35 @@
   .rounded-circle {max-width: 200px;height: auto;max-height: unset;display: block;margin: 0 auto;position: static;}
 }
 @media only screen and (max-width: 1090px) {
-    
     .card-body button {position: absolute;display:block; bottom: 0; max-width: unset;left:0}
     .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
     .feature-projects .shadow-sm {min-height: unset;}
     #features h2 {padding-left: 0;text-align: center;}
   }
-  
-  @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     /* .card-body button {bottom: 0;left: 0;max-width: unset;} */
     .carousel-control-next, .carousel-control-prev {width: 10%;height: 20%;}
     .tags-container{display:none;}
   }
-  
-  @media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     .row.align-items-center.g-5.pt-5 {text-align: center;}
   }
-  
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     #footer h3 {text-align:center;}
     #introduction object {width: 100%;max-width: fit-content;display: block;}
+    #login .container object {width: 100%;max-width: 300px;position: absolute;top: 0;right: 3rem;}
   }
-  
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     #skills .container .row .col .card .card-body {min-height: 200px;}
   }
-  
-  @media only screen and (max-width: 576px) {
+@media only screen and (max-width: 700px) {
+  #login .container object {display:none;}
+}
+@media only screen and (max-width: 576px) {
     #footer h3 {text-align:left;}
     .card-body .btn-group button {font-size: 14px;}
   }
-  @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
     #login .cover{background: none;}
     #login form{padding:35vh 5vw;background-color: rgba(50, 50, 50,.2);}
   }
