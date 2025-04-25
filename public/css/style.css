@@ -23,21 +23,19 @@
 
 .tags-container {overflow: hidden;position: relative;max-width: 1000px;margin: 0 auto;white-space: nowrap;}
 .tags-slide-content {display: flex;gap: 2rem;animation: slide 20s linear infinite;will-change: transform;}
-.tags-slide-content li {flex: 0 0 auto;list-style: none;transition: transform 0.3s ease;}
-.tags-slide-content li:hover {transform: scale(1.25);cursor:pointer;}
+.tags-slide-content li {flex: 0 0 auto;list-style: none;transition: transform 0.3s ease-in-out;}
+.tags-slide-content li figure:hover {transform: scale(1.25);cursor:pointer;}
 .tags-container:hover .tags-slide-content {animation-play-state: paused;}
 .tags-slide-content li figure {
   width: 80px;
   height: 80px;
-  background: #69d3df;
-  border-radius: 50%;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   color: white;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);}
+  font-size: 1.2rem;}
 
 .tags-container::before, .tags-container::after {content: "";position: absolute;height: 100%;width: 4rem;z-index: 2;} */
 .tags-container::before {top:0;left: 0;background: linear-gradient(to left, transparent, #69d3df, #94ddba);background-size: 180% 180%;animation: gradient-animation 40s ease infinite;height: auto;width: auto;overflow: visible;position: relative;opacity:0.4;}
