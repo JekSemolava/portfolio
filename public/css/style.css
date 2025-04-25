@@ -82,6 +82,7 @@ body{position:relative;}
   text-align: center;
   max-height: 50px;}
 #login form input {margin-bottom: 1rem;width:100%;}
+#login object {object-fit: cover;object-position: 85% 20%;margin:auto;}
 
 
 /* Header */
