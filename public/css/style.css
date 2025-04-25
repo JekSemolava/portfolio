@@ -13,28 +13,36 @@
 }
 
 @keyframes slide {
-  from {
-      transform: translate(0);
+  0% {
+    transform: translateX(0);
   }
-
-  to {
-      transform: translate(-100%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-.tags-container {overflow: hidden;font-weight: 600;white-space: nowrap;position: relative;width: 100%;max-width: 1000px;margin: 0 auto;}
+.tags-container {overflow: hidden;position: relative;max-width: 1000px;margin: 0 auto;white-space: nowrap;}
+.tags-slide-content {display: flex;gap: 2rem;animation: slide 20s linear infinite;will-change: transform;}
+.tags-slide-content li {flex: 0 0 auto;list-style: none;transition: transform 0.3s ease;}
+.tags-slide-content li:hover {transform: scale(1.25);cursor:pointer;}
 .tags-container:hover .tags-slide-content {animation-play-state: paused;}
-.tags-container .tags-slide-content {display: inline-block;animation: 25s slide infinite linear;
-animation-delay: 0s;
-animation-play-state: running;animation-delay: 3s;}
-ul.tags-slide-content {overflow: hidden;white-space: nowrap;padding: 0;margin: 0;justify-content: space-between;gap: 2rem;}
-.tags-slide-content li figure img {width: 100%;max-width: 250px;height: 30px;}
-.tags-slide-content.list-unstyled {justify-content: space-evenly;overflow: visible;}
-/* .tags-container::before {top:0;left: 0;background: linear-gradient(to left, transparent, #ece0e0);} */
-.tags-container::before {top:0;left: 0;background: linear-gradient(to left, transparent, #69d3df, #94ddba);background-size: 180% 180%;animation: gradient-animation 40s ease infinite;height: auto;width: auto;overflow: visible;position: relative;opacity:0.4;}
+.tags-slide-content li figure {
+  width: 80px;
+  height: 80px;
+  background: #69d3df;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);}
 
+.tags-container::before, .tags-container::after {content: "";position: absolute;height: 100%;width: 4rem;z-index: 2;} */
+.tags-container::before {top:0;left: 0;background: linear-gradient(to left, transparent, #69d3df, #94ddba);background-size: 180% 180%;animation: gradient-animation 40s ease infinite;height: auto;width: auto;overflow: visible;position: relative;opacity:0.4;}
 .tags-container::after {top:0;right: 0;background: linear-gradient(to right, transparent);}
-.tags-container::before, .tags-container::after {content: "";position: absolute;height: 100%;width: 4rem;z-index: 2;}
+.tags-slide-content li figure img {width: 100%;}
 
 
 a{text-decoration: none;color: white;}
