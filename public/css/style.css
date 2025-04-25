@@ -102,6 +102,7 @@ body{position:relative;}
 
 #textAnimation {border-color: transparent;background-color: transparent;}
 #introduction {height: auto;width: 100%;min-height: 25vh;margin: auto;}
+#introduction object {object-fit: cover;object-position: 95% 20%;}
 
 /* Sidebar */
 #sidebar{display:none;}
