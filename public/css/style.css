@@ -1,4 +1,3 @@
-
 /* @KEYFRAMES*/
 @keyframes gradient-animation {
   0% {
@@ -152,7 +151,7 @@ body{position:relative;}
 #icon-grid2 figure button img {width: 100%;max-width: 50px;}
 #icon-grid2 figure button.btn-dark img {filter: invert(100%);}
 .card-body{position:relative;}
-.card-body .btn-group {width: 100%;margin-top: 1rem; max-width: unset;display: flex;gap:1rem;}
+.card-body .btn-group {position: absolute;   bottom: 1rem;   display: block;   z-index: 999;   float: right;   right: 0;}
 .tags-slide-content.list-unstyled {display: flex;max-width: 1200px;margin:0 auto;;width: 100%;height: auto;}
 
 /* Skills */
