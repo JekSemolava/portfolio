@@ -14,6 +14,11 @@
 }
 @media only screen and (max-width: 1090px) {
     .card-body button {position: absolute;display:block; bottom: 0; max-width: unset;left:0}
+    .card-body .btn-group {width:100px;background-color: #539bcb;}
+    .card-body .btn.btn-sm.btn-dark.my-4 {   background-color: transparent;   border-color: transparent; margin: 1.25rem 0 !important;}
+    .card-body .btn.btn-sm.btn-dark.my-4 a:hover {color: #000;}
+    .card-body .btn.borderless.my-4 {   margin: 0 !important; }
+    .card-body .btn.borderless.my-4 img:hover { filter: invert(100);}
     .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
     .feature-projects .shadow-sm {min-height: unset;}
     #features h2 {padding-left: 0;text-align: center;}
