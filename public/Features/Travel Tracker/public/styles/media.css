@@ -6,7 +6,7 @@
 @media screen and (max-width: 767px) {
 .ag-canvas {-webkit-flex-flow: row wrap;-ms-flex-flow: row wrap;flex-flow: row wrap;height: auto;padding: 10rem 1rem 1rem;}
 .ag-canvas_svg {max-height: calc(100% - 6rem);margin-left: 0;}
-#footer h2 {padding: 0 0 5rem;}
+#footer h2 {padding: 0 1rem 5rem;}
 }
 
 @media only screen and (max-width: 400px) {
