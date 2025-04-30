@@ -45,3 +45,8 @@ form div.form-action-buttons{text-align:center;}
 
 #employeeList th > * {float: right;right: 1rem;}
 #employeeList td {font-size: 14px;}
+
+#footer h2 {font-size: 1rem; display: flex;   justify-content: space-between;   gap: 1rem;   line-height: 3; margin:auto 0;}
+
+.references figure {position: absolute;right: 2rem;float: right;bottom: 0;z-index:999;}
+#footer .references img {width: 100%;max-width: 100px;}
