@@ -12,6 +12,7 @@ const db = new Client({
   ssl: { rejectUnauthorized: false },
 });
 //db.connect();
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
 db.connect().catch(err => console.error("DB connection error:", err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
