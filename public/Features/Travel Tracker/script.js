@@ -11,11 +11,16 @@ const db = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
 });
-db.connect();
+//db.connect();
+db.connect().catch(err => console.error("DB connection error:", err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection:', reason);
+});
 
 async function checkVisited() {
   const result = await db.query("SELECT country_code FROM visited_countries");
