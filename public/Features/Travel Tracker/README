@@ -1,8 +1,2 @@
-README | access via localhost
-1. Clone/Download Repo locally
-2. Open Terminal in project folder
-3. run 
-	npm install
-	node script.js
-
-4. On Browser | http://localhost:3000
+README 
+1. Live Link https://portfolio-a302.onrender.com
