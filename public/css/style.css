@@ -125,13 +125,14 @@ body{position:relative;}
 
 /* FEATURES */
 #features{display: block;margin:0 auto;}
-/* .feature-projects {} */
 #features h2 {padding-left: 6rem;}
 #writeup .text {width: 100%;}
 #writeup .text span{display:block; font-size:1rem;}
 .col.d-flex.align-items-start p {font-size: .85rem !important;}
 .col.d-flex.align-items-start svg {   padding: .355rem;   background-color: #d0c5c5;   border-radius: 20px; }
-.feature-projects img {width: 100%;height: auto;}
+
+.card-body .btn-group{background-color: #66afc5;}
+.feature-projects img {width: 100%;height: auto;transform: scale(1);transform-origin: center center;}
 .feature-projects .shadow-sm {display:flex; overflow: hidden;width: 100%;height: auto;min-height: 500px;}
 .feature-projects .shadow-sm mark a{color:#fc5069;}
 .feature-projects .shadow-sm a{color:#fff;}
@@ -142,7 +143,6 @@ body{position:relative;}
 .feature-projects:nth-child(4){transition-delay:600ms;}
 
 /* Experience */
-/* #experience{background-color: #ece0e0;} */
 .rounded-circle{border-radius: 50% !important;width: 100%;max-width: 12vw;height: auto;max-height: 30vh;}
 #icon-grid2 .col:nth-child(1) figure img, #icon-grid2 .col:nth-child(2) figure img {width: 100%;height: auto;max-width: 75px;margin: 0 auto;}
 #icon-grid2 {display: flex;gap: 2rem;justify-content: center;}
@@ -176,8 +176,6 @@ footer .col .phone ul li{pointer-events:none;}
 .phone ul li mark{background-color:transparent;}
 
 
-/*Local Mod*/
 #header .btn-group {width: 100%;display: flex;max-width: 250px;justify-content: space-between;gap: 1rem;}
 #parallax {content: "";position: fixed;width: 100%;z-index: -1;}
 #parallax .cover {width: 100%;height: 100vh;background: url("../images/liquid-cheese.png");background-repeat:no-repeat;background-size:cover;opacity:0.65;}
-/* source: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/*/
