@@ -8,7 +8,7 @@
   --other-blue:#4D55CC;
   }
 
-html {background-color: #6eff65;background: url("./images/liquid-cheese.png");font-family: "Poppins", sans serif;}
+html {background-color: #6eff65;background: url("../images/liquid-cheese.png");font-family: "Poppins", sans serif;}
 body{font-family: "Poppins"; margin: 11vh 0;background:transparent;}
 a{cursor:pointer; text-decoration:underline; color:var(--bs-tertiary); margin-right:4px;}
 .container{width: 100%;display: block;margin: 0 auto;max-width: 1000px;position:relative;background-color: #fff;padding: 1rem .5rem;border-radius: 10px;}
