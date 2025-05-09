@@ -26,7 +26,7 @@ tr:nth-child(even),table.list thead>tr{background-color:var(--bs-secondary);}
 #sampleFile a:hover {color: var(--other-green);}
 
 #formSheet{}
-.formsheet {width: 30%;padding: 20px;}
+.formsheet {width: 30%;padding: 20px;background: #FBF3C1;}
 label.validation-error{ color:var(--bs-tertiary); margin-left:5px;}
 .formsheet form div.form-action-buttons input[type=submit]{background-color:transparent; color:var(--bs-primary); padding:0; margin:0; border:none; border-radius:none; cursor:pointer;}
 
