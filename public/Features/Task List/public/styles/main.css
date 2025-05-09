@@ -1,0 +1,51 @@
+html {background-color: #6eff65;background: url("../assets/liquid-cheese.png");font-family: "Poppins", sans serif;}
+body {display: flex;flex-direction: column;justify-content: stretch;min-height: 95vh;}
+main {text-align: center;flex: 1 0 auto;}
+h1 {color: #616265;padding: 10px;pointer-events:none;}
+
+.box {max-width: 400px;margin: 50px auto;background: #FFFA8D;border-radius: 5px;box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);height: auto;max-height: 300px;overflow: auto;position:relative;}
+form.edit {display: flex;background-color: #fff;margin-left: 0;}
+p.strikethrough {text-decoration: line-through;color: gray;}
+
+#heading {background-color: transparent;text-align: center;}
+
+/*Fields*/
+.item {min-height: 70px;display: flex;align-items: center;border-bottom: 1px solid #C2CE8F;}
+.item p {width: 100%; max-width: 250px; line-height: 1; text-align: left; white-space: wrap; overflow: hidden;text-overflow: ellipsis;}
+.item p:hover {font-weight: 600;cursor: pointer;}
+.item:last-child { background-color: #fffa8d; border: none; padding-left: 1.5rem; margin: 0; position: sticky;bottom: 0;}
+.item:last-child:focus-within {background-color:#fff;}
+
+input[type="checkbox"] {margin: 20px;margin-left: 0;}
+p {margin: 0;padding: 20px 0;font-size: 20px;color: #00204a;}
+form {text-align: center;margin-left: 20px;}
+.icon {height: 20px;}
+input[type="text"] {text-align: left;height: 60px;top: 10px;border: none;background: transparent;font-size: 20px;font-weight: 200;width: 80%;}
+input[type="text"]:focus {outline: none;box-shadow: inset 0 -3px 0 0 #a683e3;}
+::placeholder {color: lightgray;opacity: 1;}
+
+footer {flex: 0 0 auto;color: black;text-align: center;}
+#footer{display: block;margin: 0 auto;width: 100%;color: var(--bs-black);}
+#footer h2 {font-size: 1rem; display: flex;   justify-content: space-between;   gap: 1rem;   line-height: 3; margin:auto 0;}
+#footer h3 {text-align:left; font-weight:600;text-transform: uppercase;margin-bottom: 6px;position: relative;font-family: "Poppins";font-size: .909rem;color:var(--bs-black);}
+
+.references figure {position: absolute;right: 2rem;float: right;bottom: 0;z-index:999;}
+#footer .references img {width: 100%;max-width: 100px;}
+
+/*Buttons*/
+button.add {min-height: 50px;width: 50px;border-radius: 50%;border-color: transparent;background-color: #8affc2;color: #fff;font-size: 30px;border-width: 0;cursor:pointer;}
+button.add:hover{background-color: #14b05faa;scale:.90;}
+
+button.reset {background-color: #FFB22C;color: #183B4E;padding: 10px 20px;border: none;cursor: pointer;margin: auto;border-radius: 4px;font-family: Poppins, serif;   font-size: 16px;}
+button.reset:hover {background-color: #FA812F;color: #FFF}
+
+#reset-container.hidden {max-height: 0;opacity: 0;overflow: hidden;transition: max-height 0.3s ease, opacity 0.3s ease;}
+#reset-container.show {max-height: 100px;opacity: 1;}
+
+button.edit, button.remove {margin:0;background-color: transparent;border: none;cursor: pointer;}
+button.edit .icon {width: 25px;height: 20px;}
+button.remove .icon {width: 23px;height: 20px;}
+
+button.edit .icon:hover ,button.remove .icon:hover{scale:1.25;font-weight:600;}
+
+#newItemInput { background: transparent;   margin: 0;   padding: 0;cursor:text; }
