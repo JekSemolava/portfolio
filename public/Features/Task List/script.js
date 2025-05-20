@@ -6,6 +6,56 @@ let listItems = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 let nextId = listItems.length > 0 ? Math.max(...listItems.map(i => i.id)) + 1 : 1;
 
 const box = document.getElementById("box");
+const batchRow = document.createElement("div");
+batchRow.className = "item batch-row hidden";
+batchRow.innerHTML = `
+  <input type="checkbox" id="selectAllCheckbox">
+  <button class="batch-delete" id="deleteSelectedBtn">Delete Selected</button>
+  <button class="clear" id="clearSelectionBtn">Clear</button>
+`;
+
+box.insertBefore(batchRow, box.firstChild);
+
+const selectAllCheckbox = document.getElementById("selectAllCheckbox");
+const deleteSelectedBtn = document.getElementById("deleteSelectedBtn");
+const clearSelectionBtn = document.getElementById("clearSelectionBtn");
+
+clearSelectionBtn.addEventListener("click", () => {
+  const checkboxes = document.querySelectorAll(".item input[type='checkbox']");
+  checkboxes.forEach(cb => cb.checked = false);
+  updateBatchRowVisibility();
+});
+
+
+selectAllCheckbox.addEventListener("change", () => {
+  const checkboxes = document.querySelectorAll(".item input[type='checkbox']");
+  checkboxes.forEach(cb => cb.checked = selectAllCheckbox.checked);
+  updateStrikeThroughAndBatchRow();
+});
+
+deleteSelectedBtn.addEventListener("click", () => {
+  const selectedIds = listItems
+    .filter(item => document.getElementById(`checkbox${item.id}`).checked)
+    .map(item => item.id);
+
+  if (selectedIds.length === 0) return;
+
+  const confirmDelete = confirm(`Are you sure you want to delete ${selectedIds.length} task(s)?`);
+  if (!confirmDelete) return;
+
+  // Remove from list
+  listItems = listItems.filter(item => !selectedIds.includes(item.id));
+  saveList();
+
+  // Remove from DOM
+  selectedIds.forEach(id => {
+    const element = document.getElementById(`checkbox${id}`).closest(".item");
+    if (element) element.remove();
+  });
+
+  updateResetButtonVisibility();
+  updateBatchRowVisibility();
+});
 
 const addForm = document.createElement("form");
 addForm.className = "item";
@@ -41,18 +91,27 @@ function handler(id) {
 
 function applyStrikeThrough(checkbox, id) {
   const titleElement = document.getElementById("title" + id);
-  if (checkbox.checked) {
-    titleElement.style.textDecoration = "line-through";
-    titleElement.style.color = " #71db71cc";
-  } else {
-    titleElement.style.textDecoration = "none";
-    titleElement.style.color = "inherit"; 
-  }
+  titleElement.style.textDecoration = checkbox.checked ? "line-through" : "none";
+  titleElement.style.color = checkbox.checked ? "#71db71cc" : "inherit";
 
   const item = listItems.find(i => i.id === id);
   if (item) {
     item.completed = checkbox.checked;
     saveList();
+  }
+
+  updateBatchRowVisibility();
+}
+
+function updateBatchRowVisibility() {
+  const checkboxes = document.querySelectorAll(".item input[type='checkbox']");
+  const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+
+  if (anyChecked) {
+    batchRow.classList.remove("hidden");
+  } else {
+    batchRow.classList.add("hidden");
+    selectAllCheckbox.checked = false;
   }
 }
 
@@ -89,7 +148,10 @@ function addItemToDOM(item) {
   box.insertBefore(itemDiv, addForm);
 
   const checkbox = itemDiv.querySelector(`#checkbox${item.id}`);
-  checkbox.addEventListener("change", () => applyStrikeThrough(checkbox, item.id));
+ checkbox.addEventListener("change", () => {
+    applyStrikeThrough(checkbox, item.id);
+    updateBatchRowVisibility();
+  });
 
   const editForm = itemDiv.querySelector(`#editForm${item.id}`);
   editForm.addEventListener("submit", function (e) {
