@@ -2,8 +2,6 @@
 @media only screen and (max-width: 600px) {
   .item p {font-size: 1rem; white-space: nowrap;}
   .references figure {right:0;}
-  button.add {scale:60%;}
-  button.add:hover {scale:65%;}
 }
 @media only screen and (max-width: 400px) {
   .references figure {margin: auto 0;}
