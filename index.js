@@ -45,6 +45,7 @@ app.get("/Online Portfolio/index.html", (req, res) => {
 });
 
 app.post("/check", (req, res) => {
+  console.log("ACCESS_ID from env:", process.env.ACCESS_ID);
   const password = req.body.password;
   if (password === process.env.ACCESS_ID) {
     res.redirect("/index.html");
