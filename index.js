@@ -49,7 +49,7 @@ app.post("/check", (req, res) => {
   if (password === process.env.ACCESS_ID) {
     res.redirect("/Online Portfolio/index.html");
   } else {
-    res.redirect("/login.html");
+    res.redirect("/login.html?error=1");
   }
 });
 
