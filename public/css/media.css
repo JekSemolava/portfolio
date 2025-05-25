@@ -11,7 +11,7 @@
   .feature-projects.g-3.pt-3.pb-5.col-12 .align-items-center {  max-width: 500px;}
 }
 @media only screen and (max-width: 1100px) {
-  .feature-projects .shadow-sm{min-height: 435px;}
+  .feature-projects .shadow-sm {min-height: unset;}
   .rounded-circle {max-width: 200px;height: auto;max-height: unset;display: block;margin: 0 auto;position: static;}
 }
 @media only screen and (max-width: 1090px) {
@@ -22,7 +22,6 @@
     .card-body .btn.borderless.my-4 {   margin: 0 !important; }
     .card-body .btn.borderless.my-4 img:hover { filter: invert(100);}
     .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
-    .feature-projects .shadow-sm {min-height: unset;}
     #features h2 {padding-left: 0;text-align: center;}
   }
 @media only screen and (max-width: 1000px) {
