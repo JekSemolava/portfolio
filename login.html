@@ -17,7 +17,7 @@
   <section id="login">
     <div class="cover">
     <div class="container">
-        <form id="loginForm" method="POST" action="/check">
+        <form id="loginForm">
           <div class="login-logo btn-group my-4">
             <h3>
               Jas
@@ -39,11 +39,18 @@
 
   <script src="./index.js"></script>
   <script src="./script.js"></script>
+  <script src="./config.js"></script>
   <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get("error") === "1") {
-    alert("Incorrect password. Please try again.");
-  }
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const password = document.getElementById("password").value;
+
+    if (password === ACCESS_ID) {
+      window.location.href = "index.html";
+    } else {
+      alert("Incorrect password");
+    }
+  });
   </script>
   
 
