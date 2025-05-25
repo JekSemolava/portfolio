@@ -47,7 +47,7 @@ app.get("/Online Portfolio/index.html", (req, res) => {
 app.post("/check", (req, res) => {
   const password = req.body.password;
   if (password === process.env.ACCESS_ID) {
-    res.redirect("/Online Portfolio/index.html");
+    res.redirect("/index.html");
   } else {
     res.redirect("/login.html?error=1");
   }
