@@ -17,12 +17,19 @@
   <section id="login">
     <div class="cover">
     <div class="container">
-        <form id="loginForm">
+        <form id="loginForm" method="POST" action="/check">
           <div class="login-logo btn-group my-4">
-            <h3>Jas<button type="button" class="btn btn-dark px-1 pb-1"><span>on</span></button></h3>
+            <h3>
+              Jas
+              <button type="button" class="btn btn-dark px-1 pb-1">
+                <span>on</span>
+              </button>
+            </h3>
           </div>
+
           <label for="password">Access:</label>
           <input type="password" id="password" name="password" required>
+
           <input type="submit" value="Submit">
         </form>
       <object type="image/svg+xml" data="./public/images/Jason_animation.svg" height="400" width="700"></object>
@@ -31,20 +38,12 @@
   </section>
 
   <script>
-    const correctPassword = 'user123';
-
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const password = document.getElementById('password').value; 
-
-      if (password === correctPassword) {
-        window.location.href = '/portfolio/index';
-      } else {
-        alert('Incorrect access. Please try "user123".');
-      }
-    });
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("error") === "1") {
+    alert("Incorrect password. Please try again.");
+  }
   </script>
+
   <section id="footer">
   <div class="references">
       <figure title="The App Brewery">
