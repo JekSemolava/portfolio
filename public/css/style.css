@@ -132,11 +132,12 @@ body{position:relative;}
 .col.d-flex.align-items-start svg {   padding: .355rem;   background-color: #d0c5c5;   border-radius: 20px; }
 
 .card-body .btn-group{background-color: #66afc5;}
+.feature-projects.g-3.pt-3.pb-5.col-12 {display: flex;gap: 1rem;overflow: auto;}
 .feature-projects img {width: 100%;height: auto;transform: scale(1);transform-origin: center center;}
 .feature-projects .shadow-sm {display:flex; overflow: hidden;width: 100%;height: auto;min-height: unset;}
 .feature-projects .shadow-sm mark a{color:#fc5069;}
 .feature-projects .shadow-sm a{color:#fff;}
-.card.shadow-sm figure {width: 100%;height: auto;max-height: 300px;overflow: hidden;}
+.card.shadow-sm figure {width: 100%;height: auto;max-height: 140px;overflow: hidden;}
 .btn-group {position: absolute;bottom: 1rem;display:block;}
 .feature-projects:nth-child(2){transition-delay:200ms;}
 .feature-projects:nth-child(3){transition-delay:400ms;}
