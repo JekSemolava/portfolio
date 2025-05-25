@@ -31,26 +31,21 @@ app.get("/", (req, res) => {
 
 app.get("/login", (req, res) => {
   userIsLoggedIn = false;
-  res.render("login.html");
+  res.sendFile(__dirname + "login.html");
 });
 
 app.get("/portfolio/login", (req, res) => {
   userIsLoggedIn = false;
-  res.render("login.html");
-});
-
-app.get("/Online Portfolio/index.html", (req, res) => {
-  userIsLoggedIn = false;
-  res.sendFile(__dirname + "/public/login.html");
+  res.sendFile(__dirname + "login.html");
 });
 
 app.post("/check", (req, res) => {
   console.log("ACCESS_ID from env:", process.env.ACCESS_ID);
   const password = req.body.password;
   if (password === process.env.ACCESS_ID) {
-    res.redirect("/index.html");
+    res.sendFile(__dirname + "/public/index.html");
   } else {
-    res.redirect("/login.html?error=1");
+    res.sendFile(__dirname + "/login.html?error=1");
   }
 });
 
