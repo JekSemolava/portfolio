@@ -1,0 +1,7 @@
+#Use Create React App or Vite to scaffold and run the app.
+#npx create-react-app travel-blog
+#cd travel-blog
+# //Copy the files into src/components etc.
+#npm start
+
+#Currently the link shown on the feature section regarding the travel blog is via code sandbox.
