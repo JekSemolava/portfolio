@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../../public/styles.css";
+import "../styles.css";
 
 const currentHour = new Date().getHours();
 let title = "TRAVEL GALLERY";
