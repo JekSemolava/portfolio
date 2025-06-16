@@ -1,7 +1,37 @@
-#Use Create React App or Vite to scaffold and run the app.
-#npx create-react-app travel-blog
+#Create React Vite Project to run the app.
+#npm create vite@latest travel-blog -- --template react
 #cd travel-blog
-# //Copy the files into src/components etc.
-#npm start
+#npm install
+
+#Directory
+travel-blog/
+├── public/
+│   ├── media.css          <-- put your media.css here
+│   └── favicon.svg        <-- you can ignore or replace
+├── src/
+│   ├── components/        <-- your App, Header, Card, etc.
+│   ├── assets/            <-- your travels() data, images, etc.
+│   ├── travels.js         <-- travel data file
+│   ├── styles.css         <-- move styles here if you're importing it in JS
+│   └── main.jsx           <-- your main entry
+
+#Replace the contents of src/main.jsx with your own code:
+#import React from "react";
+#import ReactDOM from "react-dom/client";
+#import App from "./components/App.jsx";
+#import "./styles.css";
+
+#ReactDOM.createRoot(document.getElementById("root")).render(
+#  <React.StrictMode>
+#    <App />
+#  </React.StrictMode>
+#);
+
+#update index.html on root directory
+
+#Run Project
+#npm run dev
+
+#usually url would be at http://localhost:5173/
 
 #Currently the link shown on the feature section regarding the travel blog is via code sandbox.
