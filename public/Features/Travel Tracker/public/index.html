@@ -401,116 +401,125 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 <script>
-  async function updateTotalVisited() {
-    try {
-      const response = await fetch("/data");
-      const data = await response.json();
+  let COUNTRY_DATA = {};
 
-      document.getElementById("total-count-number").textContent = data.total;
+  async function loadCountryData() {
+    const res = await fetch("countries.csv");
+    const csv = await res.text();
+    const lines = csv.trim().split("\n").slice(1);
 
-      
-      document.querySelectorAll('path').forEach(p => p.style.fill = '');
-
-      
-      data.countries.forEach(code => {
-        const countryElement = document.getElementById(code);
-        if (countryElement) {
-          countryElement.style.fill = 'teal';
-        }
-      });
-
-    } catch (error) {
-      console.error("Error fetching visited countries:", error);
-    }
+    lines.forEach(line => {
+      const [id, code, name] = line.split(",");
+      COUNTRY_DATA[code.trim()] = name.trim();
+    });
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    updateTotalVisited();
+  function getVisitedCountries() {
+    return JSON.parse(localStorage.getItem("visitedCountries")) || [];
+  }
+
+  function saveVisitedCountries(countries) {
+    localStorage.setItem("visitedCountries", JSON.stringify(countries));
+  }
+
+  function findCountryCodeByName(input) {
+    const search = input.trim().toLowerCase();
+    return Object.keys(COUNTRY_DATA).find(code =>
+      COUNTRY_DATA[code].toLowerCase().includes(search)
+    );
+  }
+
+  function showAlert(message, type = "success") {
+    const alertContainer = document.getElementById("alert-container");
+    const alertDiv = document.createElement("div");
+
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+    alertDiv.role = "alert";
+    alertDiv.innerHTML = `
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+
+    alertContainer.appendChild(alertDiv);
+
+    setTimeout(() => {
+      alertDiv.classList.remove("show");
+      alertDiv.classList.add("hide");
+      setTimeout(() => alertDiv.remove(), 500);
+    }, 3000);
+  }
+
+  function updateTotalVisitedUI() {
+    const visited = getVisitedCountries();
+    document.getElementById("total-count-number").textContent = visited.length;
+
+    document.querySelectorAll('path.visited').forEach(p => p.classList.remove('visited'));
+    
+    visited.forEach(code => {
+      const path = document.getElementById(code);
+      console.log("Updating code:", code, path);
+      if (path) path.classList.add('visited');
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", async () => {
+    await loadCountryData();
+    updateTotalVisitedUI();
 
     const form = document.getElementById("modify-form");
     const resetForm = document.getElementById("reset-form");
 
-    resetForm.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Stop normal form POST
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const input = formData.get("country");
+      const action = event.submitter.value;
 
-      if (!confirm("Are you sure you want to reset all data?")) {
+      const code = findCountryCodeByName(input);
+      if (!code) {
+        showAlert("Country not found in list.", "danger");
         return;
       }
 
-      try {
-        const response = await fetch("/modify", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ action: "reset" }),
-        });
+      let visited = getVisitedCountries();
 
-        const result = await response.json();
+      if (action === "add") {
+        if (visited.includes(code)) {
+          showAlert("Country already added.", "danger");
+          const path = document.getElementById(code);
+          if (path) {
+            path.classList.add("visited", "animate-add");
 
-        if (response.ok) {
-          showAlert(result.message, "success");
-          await updateTotalVisited();  // Update the total count
-          document.querySelectorAll('path').forEach(p => p.style.fill = '');
+            path.addEventListener("animationend", () => {
+              path.classList.remove("animate-add");
+            }, { once: true });
+          }
         } else {
-          showAlert(result.error, "danger");
+          visited.push(code);
+          saveVisitedCountries(visited);
+          showAlert("Country added successfully.");
         }
-
-      } catch (error) {
-        console.error("Error resetting visited countries:", error);
+      } else if (action === "delete") {
+        if (!visited.includes(code)) {
+          showAlert("Country is not in your visited list.", "danger");
+        } else {
+          visited = visited.filter(c => c !== code);
+          saveVisitedCountries(visited);
+          showAlert("Country removed.");
+        }
       }
+
+      form.reset();
+      updateTotalVisitedUI();
     });
 
-    function showAlert(message, type = "success") {
-      const alertContainer = document.getElementById("alert-container");
-      const alertDiv = document.createElement("div");
+    resetForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!confirm("Are you sure you want to reset all data?")) return;
 
-      alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
-      alertDiv.role = "alert";
-      alertDiv.innerHTML = `
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      `;
-
-      alertContainer.appendChild(alertDiv);
-
-      // Auto-remove after 3 seconds
-      setTimeout(() => {
-        alertDiv.classList.remove("show");
-        alertDiv.classList.add("hide");
-        setTimeout(() => alertDiv.remove(), 500);
-      }, 3000);
-    }
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Stop normal form POST
-      const formData = new FormData(form);
-      const country = formData.get("country");
-      // const action = formData.get("action");
-      const action = event.submitter.value;
-
-      try {
-        const response = await fetch("/modify", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ country, action }),
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-          showAlert(result.message, "success");
-          await updateTotalVisited();
-          form.reset();
-        } else {
-          showAlert(result.error, "danger");
-        }                 
-
-      } catch (error) {
-        console.error("Error submitting form:", error);
-      }
+      localStorage.removeItem("visitedCountries");
+      updateTotalVisitedUI();
+      showAlert("Visited countries reset.", "success");
     });
   });
 </script>
