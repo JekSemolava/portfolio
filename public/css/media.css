@@ -27,7 +27,6 @@
 @media only screen and (max-width: 1000px) {
     .carousel-control-next, .carousel-control-prev {width: 10%;height: 20%;}
     .feature-projects.g-3.pt-3.pb-5.col-12 {display:block;}
-    .svg.col-lg-6 {width:80%;border-radius:0;background-color: #d1fbff; padding: 30px 0px; margin-top:5vh;}
   }
 @media only screen and (max-width: 992px) {
     .row.align-items-center.g-5.pt-5 {text-align: center;}
@@ -35,6 +34,7 @@
 @media only screen and (max-width: 800px) {
     #footer h3 {text-align:center;}
     #introduction object {object-position: 80% -110%;object-fit: cover;width: 100%;margin-top: 2.5vh;}
+    .svg.col-lg-6 {width:80%;border-radius:0;background-color: #d1fbff; padding: 30px 0px; margin-top:5vh;}
     .feature-projects.g-3.pt-3.pb-5.col-12 {  display: block;}
   }
 @media only screen and (max-width: 768px) {
@@ -49,4 +49,5 @@
     #login .cover{background: none;}
     #login form{padding:35vh 5vw;background-color: rgba(50, 50, 50,.2);}
   }
+
 
