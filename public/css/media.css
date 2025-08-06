@@ -30,6 +30,7 @@
   }
 @media only screen and (max-width: 992px) {
     .row.align-items-center.g-5.pt-5 {text-align: center;}
+    .col-lg-6 {flex: 0 0 auto;width: 50%;border-radius: 500px;overflow: hidden;background-color: #b0bd7a;padding: 75px 0px;}
   }
 @media only screen and (max-width: 800px) {
     #footer h3 {text-align:center;}
@@ -48,3 +49,4 @@
     #login .cover{background: none;}
     #login form{padding:35vh 5vw;background-color: rgba(50, 50, 50,.2);}
   }
+
