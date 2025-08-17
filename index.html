@@ -16,15 +16,16 @@
     <!-- Header -->
     <section id="header" class="">
       <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
+        <header class="d-flex flex-wrap align-items-center justify-content-end justify-content-md-end py-3 mb-0 border-bottom">
           <div class="col-md-3 mb-2 mt-2 mb-md-0 pt-4">
             <a href="https://www.linkedin.com/in/jason-semolava-001b531b2/" title="Linkedin Profile" target="_blank" rel="noopener" class="d-inline-flex link-body-emphasis text-decoration-none">
               <div class="btn-group">
-                <h3>Jas<button type="button" class="btn btn-dark px-1 pb-1"><span>on</span></button></h3>
+                <!--<h3>Jas<button type="button" class="btn btn-dark px-1 pb-1"><span>on</span></button></h3>-->
+                <figure><img src="./public/images/main_logo.png" alt="github"></figure>
               </div>
             </a>
           </div>
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <ul class="nav col-12 col-md-auto mb-2 mb-md-0 ms-auto">
             <li><a href="#projects" class="nav-link px-2 link-secondary">Projects</a></li>
             <li><a href="#features" class="nav-link px-2">Features</a></li>
             <li><a href="#experience" class="nav-link px-2">Experience</a></li>
@@ -63,106 +64,51 @@
   </section>
 
   <!-- Title -->
-  <section id="projects" class="gradient-background" >
-      <div class="container col-xxl-12 px-4 pt-5 pb-5">
-        <h1 class="title">Career Project Contributions</h1>
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner align-items-center">
+<section id="projects">
+  <div class="container col-xxl-12 px-4 pt-5 pb-5">
+    <h1 class="title mb-5">Contributions</h1>
 
-            <!-- Card# 1 -->
-              <div class="carousel-item active">
-                <div class="row align-items-center g-5 pt-5 pb-5">
-                  <div class="">
-                      
-                    <figure>
-                      <div class="">
-                        <a target="_blank" re="noopener" href="https://www.carearthomecare.com">
-                        <img src="./public/images/web1.png" class="d-block img-fluid" alt="Care Art Homecare Desktop" width="700" height="500" loading="lazy" title="Care Art Homecare">
-                        </a>
-                      </div>
-                    </figure>
-                      
-                  </div>
-                </div>
-              </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev">&#10094;</button>
 
-            <!-- Card# 2 -->
-              <div class="carousel-item">
-                <div class="row align-items-center g-5 pt-5 pb-5">
-                  <div class="">
-
-                    <figure>
-                      <div class="">
-                        <a target="_blank" re="noopener" href="https://www.weenrichandempower.com">
-                        <img src="./public/images/web2.png" class="d-block img-fluid" alt="Women Empowered Desktop" width="700" height="500" loading="lazy" title="Women Empowered">
-                        </a>
-                      </div>
-                    </figure>
-        
-                  </div>
-                </div>
-              </div>
-
-            <!-- Card# 3 -->
-              <div class="carousel-item">
-                <div class="row align-items-center g-5 pt-5 pb-5">
-                  <div class="">
-
-                    <figure>
-                      <div class="">
-                        <a target="_blank" re="noopener" href="https://www.noragsdecor.com">
-                        <img src="./public/images/web3.png" class="d-block img-fluid" alt="Nora-G's Decor Desktop" width="700" height="500" loading="lazy" title="Nora-G's Decor">
-                        </a>
-                      </div>
-                    </figure>
-        
-                  </div>
-                </div>
-              </div>
-
-            
-            <!-- Card# 4 -->
-              <div class="carousel-item">
-                <div class="row align-items-center g-5 pt-5 pb-5">
-                  <div class="">
-
-                    <figure>
-                      <div class="">
-                        <a target="_blank" re="noopener" href="https://www.wearecamen.com">
-                        <img src="./public/images/web4.png" class="d-block img-fluid" alt="Camen Desktop" width="700" height="500" loading="lazy" title="Camen">
-                        </a>
-                      </div>
-                    </figure>
-        
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
+      <div class="carousel-track">
+        <div class="carousel-card">
+          <a target="_blank" href="https://www.carearthomecare.com">
+            <img src="./public/images/web1.png" alt="Care Art Homecare">
+          </a>
         </div>
-
+        <div class="carousel-card">
+          <a target="_blank" href="https://www.weenrichandempower.com">
+            <img src="./public/images/web2.png" alt="Women Empowered">
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a target="_blank" href="https://www.noragsdecor.com">
+            <img src="./public/images/web3.png" alt="Nora-G's Decor">
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a target="_blank" href="https://www.wearecamen.com">
+            <img src="./public/images/web4.png" alt="Camen">
+          </a>
+        </div>
       </div>
-  </section>
+
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Features -->
   <section id="features" class="container mt-5 mb-5"> 
-      <h2>Featured</h2>
+      <h2 class="py-5">Web Applications</h2>
 
       <div class="feature-projects g-3 pt-3 pb-5 col-12">
           
         <!-- Travel Blog -->
-        <div class="col-12 col-sm-11 col-md-10 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-5">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
             <div class="card shadow-sm">
                 <figure><img src="./public/images/feature7.png" title="Travel Blog" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
@@ -179,7 +125,7 @@
         </div>
 
         <!--Travel Tracker-->
-        <div class="col-12 col-sm-11 col-md-10 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-5">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
             <div class="card shadow-sm">
                 <figure><img src="./public/images/feature5.png" title="Travel Tracker" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
@@ -196,7 +142,7 @@
         </div>
 
         <!--Task List-->
-        <div class="col-12 col-sm-11 col-md-10 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-5">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
             <div class="card shadow-sm">
                 <figure><img src="./public/images/feature6.png" title="Task List" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
@@ -213,7 +159,7 @@
         </div>
 
         <!--Employee Management Organizer Sheet-->
-        <div class="col-12 col-sm-11 col-md-10 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-5">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
             <div class="card shadow-sm">
                 <figure><img src="./public/images/feature3.png" title="Employee Management Organizer" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
@@ -230,7 +176,7 @@
         </div>
 
         <!--Testimonial/Review Page-->
-        <div class="col-12 col-sm-11 col-md-10 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-2">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
           <div class="card shadow-sm">
             <figure><img src="./public/images/feature4.png" title="Testimonial/Review Page" loading="lazy" alt="no preview image"></figure>
             <div class="card-body">
@@ -253,8 +199,8 @@
   </section>
 
   <!-- Work Experience -->
-  <section id="experience" class="gradient-background">
-    <div class="px-4 pt-5 my-3 text-center">
+  <section id="experience" class="">
+    <div class="px-4 pt-4 my-3 text-center">
       <figure><img class="rounded-circle mt-5 mb-2" height="100" src="./public/images/author-img.JPG" alt=""><figcaption>Jason Semolava <span>Cebu City, Philippines</span> </figcaption></figure>
     
     <div class="pt-4 my-2" id="icon-grid2">
@@ -359,8 +305,8 @@
   <section id="skills" class="">
     <div class="container">
       <div class="pricing-header pt-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">A Website for every Client</h1>
-        <p class="fs-5 text-body-secondary">Simple yet pleasing to the eyes for everyone.</p>
+        <h1 class="display-4 fw-normal">Fresh perspective</h1>
+        <p class="fs-5 text-body-secondary">Solid foundations, Growing skills, and user-friendly web experiences.</p>
       </div>
       <!-- CARDS -->
       <div class="row text-center row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 mb-3">
@@ -444,7 +390,7 @@
   </section>
 
   <!-- <%#- include("./partials/footer.ejs") %> -->
-  <section id="footer" class="gradient-background">
+  <section id="footer" class="">
     <div class="container ">
       <footer class="row row-cols-1 row-cols-sm-2 py-5 pt-5 mt-5">
         
