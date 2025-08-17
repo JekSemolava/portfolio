@@ -103,7 +103,9 @@ header button{margin-left: 1.25rem;}
 
 #textAnimation {border-color: transparent;background-color: transparent;}
 #introduction {height: auto;width: 100%;min-height: 25vh;margin: auto;}
-#introduction object {object-fit: cover;object-position: 95% 20%; margin:auto;}
+#introduction object {object-fit: cover;object-position: 100% -5%; margin:auto;}
+  .svg.col-lg-6 {flex: 0 0 auto;width: 50%;border-radius: 500px;overflow: hidden;background-color: #b0bd7a;padding: 75px 0px;}
+
 
 /* Sidebar */
 #sidebar{display:none;}
