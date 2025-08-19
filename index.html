@@ -16,20 +16,19 @@
     <!-- Header -->
     <section id="header" class="">
       <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-end justify-content-md-end py-3 mb-0 border-bottom">
-          <div class="col-md-3 mb-2 mt-2 mb-md-0 pt-4">
+        <header class="d-flex flex-wrap justify-content-end justify-content-md-end py-3 mb-0 border-bottom">
+          <div class="logo col-md-3 pt-2">
             <a href="https://www.linkedin.com/in/jason-semolava-001b531b2/" title="Linkedin Profile" target="_blank" rel="noopener" class="d-inline-flex link-body-emphasis text-decoration-none">
               <div class="btn-group">
-                <!--<h3>Jas<button type="button" class="btn btn-dark px-1 pb-1"><span>on</span></button></h3>-->
-                <figure><img src="./public/images/main_logo.png" alt="github"></figure>
+                <figure><img src="./public/images/icons/main_logo-bl.png" alt="linkedin"></figure>
               </div>
             </a>
           </div>
           <ul class="nav col-12 col-md-auto mb-2 mb-md-0 ms-auto">
             <li><a href="#projects" class="nav-link px-2 link-secondary">Projects</a></li>
-            <li><a href="#features" class="nav-link px-2">Features</a></li>
-            <li><a href="#experience" class="nav-link px-2">Experience</a></li>
-            <li><a href="./public/RESUME_JASON_S.pdf" class="nav-link px-2" target="_blank" download="cv_jason">Resume</a></li>
+            <li><a href="#features" class="nav-link px-2">Applications</a></li>
+            <!--<li><a href="#experience" class="nav-link px-2">Experience</a></li>-->
+            <li><a href="./public/RESUME_JASON_S.pdf" class="nav-link px-2" target="_blank" download="cv_jason_semolava">Resume</a></li>
           </ul>
           <button type="button" class="btn btn-outline-dark px-4" id="logoutButton" onclick="logout()">Logout</button>
         </header>
@@ -42,22 +41,22 @@
       </div>
     </section>
 
-    <!-- <%#- include("./partials/header.ejs") %> -->
 
   <section id="introduction" class="">
     <div class="container my-2">
       <div class="px-3 py-3 my-2 text-center">
         <h1 class="display-6 fw-normal text-body-emphasis">Hello, I am Jason</h1>
         <div class="card --title display-6" id="textAnimation">I am an aspiring and self-taught</div>
-        <div class="svg col-lg-6 mx-auto">
+        <div class="svg-avatar col-lg-6 mx-auto my-3">
 
-        <object type="image/svg+xml" data="./public/images/Jason_animation.svg" height="400" width="600"></object>
+        <object type="image/svg+xml" data="./public/images/Jason_animation.svg" height="400" width="400"></object>
         </div>
       </div>
       <div class="my-2 text-center">
         <ul class="socmed-icons list-unstyled">
           <li><figure><a href="https://www.linkedin.com/in/jason-semolava-001b531b2/" title="Linkedin Profile" target="_blank" rel="noopener"><img src="./public/images/icons/linkedin.png" alt="linkedin"></a></figure></li>
           <li><figure><a href="https://github.com/JekSemolava" title="github Profile" target="_blank" rel="noopener"><img src="./public/images/icons/github.png" alt="github"></a></figure></li>
+          <li><figure><a href="./public/RESUME_JASON_S.pdf" class="resume_icon" title="resume" target="_blank" download="cv_jason_semolava"><img src="./public/images/icons/resume.png" alt="resume"></a></figure></li>
         </ul>
       </div>
     </div>
@@ -304,7 +303,7 @@
   <!-- Skills -->
   <section id="skills" class="">
     <div class="container">
-      <div class="pricing-header pt-5 pb-md-4 mx-auto text-center">
+      <div class="pricing-header py-4 mt-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4 fw-normal">Fresh perspective</h1>
         <p class="fs-5 text-body-secondary">Solid foundations, Growing skills, and user-friendly web experiences.</p>
       </div>
@@ -392,7 +391,7 @@
   <!-- <%#- include("./partials/footer.ejs") %> -->
   <section id="footer" class="">
     <div class="container ">
-      <footer class="row row-cols-1 row-cols-sm-2 py-5 pt-5 mt-5">
+      <footer class="row row-cols-1 row-cols-sm-2 pt-4 mt-5">
         
           <div class="col mb-2">
             <h3>Services</h3>
