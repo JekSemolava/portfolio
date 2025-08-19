@@ -1,6 +1,6 @@
 /* WEB RESPONSIVENESS */
 @media only screen and (max-width: 1400px) {
-  #login form {padding: 55vh 1.5vw;}
+  #login form {padding: 25vh 1.5vw;}
 }
 @media only screen and (max-width: 1200px) {
   .align-items-center{max-width:325px;}
@@ -48,26 +48,43 @@
     .feature-projects img {transform: scale(1.25);}
     .feature-projects {grid-template-columns: 1fr; display: block;max-width: 70%;margin: auto;}
     .feature-projects > div {margin-bottom: 5vh;}
+
+    #login .container{display:block;}
+    
     
   }
 @media only screen and (max-width: 768px) {
     #skills .container .row .col .card .card-body {min-height: 200px;}
+    .login-logo img {
+    position: absolute;
+    max-width: 250px;
+    z-index: 100;
+    left: 3vw;
+    margin: auto;
+    display: block;}
   }
+  
 
 @media only screen and (max-width: 576px) {
     #footer h3 {text-align:left;}
     .card-body .btn-group button {font-size: 14px;}
-    #login .container object {display:none;}
+    
     .carousel-card {min-width: 85%;}
     .feature-projects {max-width: 75%;}
     .row {width: 90%;margin: auto;}
-    
+    .references figure {right: 5rem;background-color:transparent;}
 }
 @media only screen and (max-width: 400px) {
     #login .cover{background: none;}
-    #login form{padding:35vh 5vw;background-color: rgba(50, 50, 50,.2);}
+    #login form{padding:35vh 1rem;background-color: rgba(50, 50, 50,.2);}
+    #login object {display:none;}
     .carousel-card {min-width: 90%;}
     .svg-avatar{aspect-ratio:1;max-width: 300px;}
+  }
+
+  @media only screen and (max-width: 400px) {
+  .references figure {right: 3rem;}
+
   }
 
 
