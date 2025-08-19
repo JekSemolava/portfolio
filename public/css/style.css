@@ -64,25 +64,15 @@ body{position:relative;}
 .logo{position: absolute; float: left; left: 2vw; margin: auto; display: block; top: 70%;}
 
 /* Login */
-#login {}
-#login .container {max-width: 1000px; display:flex; justify-content:space-around;}
-#login .cover {width: 100%;height: 100vh;background-repeat: no-repeat;background-size: cover;opacity: 1; padding-left:2.5%;
-  background: url("../images/liquid-cheese.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-.login-logo h3{color:#0a66c2;width: 100%;height: auto;display: block;margin: 0 auto;}
-.login-logo .btn-dark {background-color: #0a66c2;font-size: 1.725rem;padding: 0;margin: 0;border-color:transparent;}
-/* #login form {opacity: 1;position: relative;z-index: 50;padding: 35vh 1.5vw;width: 100%;max-width:350px;height: 100vh;background-color: rgba(210, 203, 203,0.7);} */
-#login form {opacity: 1;position: relative;z-index: 50;padding: 35vh 1.5vw;width: 100%;max-width:350px;height: 100vh;background: linear-gradient(300deg, #69d3df, #94ddba, #0a66c2);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: 100vh;width: auto;overflow: visible;position: relative;opacity:0.8;}
-#login form .login-logo {position: absolute;
-  top: 10rem;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-  max-height: 50px;}
-#login form input {margin-bottom: 1rem;width:100%;}
-#login object {object-fit: cover;object-position: 85% 20%;margin:auto;}
+#login {height: 100vh;overflow: hidden;}
+#login .container {max-width: 1000px; display:flex; justify-content:space-around;position: relative;width: 100%;}
+#login .cover{position: relative;width: 100%;  max-width: 1400px;margin:auto;display:block;}
+.login-logo figure {position: relative;top:5vh;}
+.login-logo img {position: absolute;max-width: 225px;z-index: 100;left: 2vw;}
+
+#login form { z-index: 50; height: 100vh; width: 100%; max-width: 300px; opacity: 0.8; background-color: #c0afaf61; padding: 25vh 1rem; }
+#login form input { margin-bottom: 1rem; margin-top: .25rem; width: 90%; text-align: center; padding: 6px; border-radius: 8px; border: 1px solid #cccc; }
+#login object {margin:auto;    background-color: #b0bd7a;}
 
 
 /* Header */
@@ -177,7 +167,7 @@ header button{margin-left: 1.25rem;}
 #footer h2 {font-size: 1rem; display: flex;   justify-content: space-between;   gap: 1rem;   line-height: 3; margin:auto 0;}
 #footer h3 {text-align:left; font-weight:600;text-transform: uppercase;margin-bottom: 6px;position: relative;font-family: "Poppins";font-size: .909rem;color:var(--bs-black);}
 
-.references figure {position: absolute;right: 2rem;float: right;bottom: 0;z-index:999;}
+.references figure {position: absolute;right: 10rem;float: right;bottom: 0;z-index:999;background-color: #24232363;display: flex;gap: 1rem;padding: 5px 10px;border-radius: 20px;}
 #footer .references img {width: 100%;max-width: 100px;}
 footer .col .phone ul li{pointer-events:none;}
 
