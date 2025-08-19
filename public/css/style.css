@@ -129,19 +129,8 @@ header button{margin-left: 1.25rem;}
 
 .align-items-center {align-items: center !important;margin: 0 auto;max-width: 1400px;}
 .feature-projects .btn-group img {width: 100%;max-width: 75px;display: inline-block;}
-.socmed-icons.list-unstyled {display: flex;justify-content: center;gap:1rem;}
-.socmed-icons.list-unstyled img {
-    width: 100%;
-    max-width: 51px;
-    height: auto;
-    margin: auto 0;
-    background-color: #e5aeae;
-    height: auto;
-    min-height: 50px;
-    box-shadow: 2px 8px 33px rgba(0, 0, 0, 1);
-    border-radius: 25px;
-    filter: invert(95%);
-}
+.socmed-icons.list-unstyled {display: flex;justify-content: center;gap:1rem;overflow:hidden;}
+.socmed-icons.list-unstyled img {width: 100%;max-width: 55px;height: auto;margin: auto 0;background-color: #e5aeae;height: auto;min-height: 50px;max-height:50px;box-shadow: 2px 8px 33px rgba(0, 0, 0, 1);border-radius: 25px;filter: invert(95%);}
 
 /* FEATURES */
 #features{display: block;margin:0 auto;background-color: #f2f2f2;}
