@@ -49,6 +49,29 @@ app.post("/check", (req, res) => {
   }
 });
 
+  burger.addEventListener("click", () => {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    burger.style.display = "none";
+    header.style.display = "none";
+  });
+
+  // Close sidebar → restore burger + header + hide overlay
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    burger.style.display = "block";
+    header.style.display = "block";
+  });
+
+  // Close if clicking overlay
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    burger.style.display = "block";
+    header.style.display = "block";
+  });
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

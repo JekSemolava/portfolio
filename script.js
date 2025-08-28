@@ -4,6 +4,47 @@ const cards = [...document.querySelectorAll('.carousel-card')];
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 const blob = document.querySelector(".blob-cursor");
+const sidebar = document.getElementById("sidebar");
+  const burger  = document.getElementById("burgerButton");
+  const closeBtn= document.getElementById("sb_closeButton");
+  const header  = document.getElementById("header");
+  const overlay = document.getElementById("overlay");
+  const links   = sidebar.querySelectorAll("a"); // all links inside sidebar
+
+  function openSidebar() {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
+
+    burger.style.display = "none";
+    header.style.display = "none";
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+
+    burger.style.display = "block";
+    header.style.display = "block";
+  }
+
+  burger.addEventListener("click", openSidebar);
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar);
+
+  // NEW: close sidebar when a link is clicked
+  links.forEach(link => {
+    link.addEventListener("click", closeSidebar);
+  });
+
+  // Optional: ESC key closes sidebar
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && sidebar.classList.contains("active")) {
+      closeSidebar();
+    }
+  });
+
 
 document.querySelectorAll(".flip-card").forEach(card => {
     card.addEventListener("click", () => {

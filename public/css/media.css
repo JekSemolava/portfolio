@@ -41,8 +41,12 @@
 @media only screen and (max-width: 800px) {
     #header .nav {display: none;}
     button.burger{display:block;}
+    #burgerButton{display:block;}
     #logoutButton{display:none;}
     #footer h3 {text-align:center;}
+
+    #sb_closeButton {width:70px; height:45px;}
+    button.burger img {max-width: 27px;}
   
    
     .carousel-card {min-width: 70%;}
