@@ -3,11 +3,58 @@ const track = document.querySelector('.carousel-track');
 const cards = [...document.querySelectorAll('.carousel-card')];
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
+const blob = document.querySelector(".blob-cursor");
+const sidebar = document.getElementById("sidebar");
+  const burger  = document.getElementById("burgerButton");
+  const closeBtn= document.getElementById("sb_closeButton");
+  const header  = document.getElementById("header");
+  const overlay = document.getElementById("overlay");
+  const links   = sidebar.querySelectorAll("a"); // all links inside sidebar
+
+  function openSidebar() {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
+
+    burger.style.display = "none";
+    header.style.display = "none";
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+
+    burger.style.display = "block";
+    header.style.display = "block";
+  }
+
+  burger.addEventListener("click", openSidebar);
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar);
+
+  // NEW: close sidebar when a link is clicked
+  links.forEach(link => {
+    link.addEventListener("click", closeSidebar);
+  });
+
+  // Optional: ESC key closes sidebar
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && sidebar.classList.contains("active")) {
+      closeSidebar();
+    }
+  });
+
+
+document.querySelectorAll(".flip-card").forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-flipped");
+    });
+  });
 
 let index = 0;
-let cardWidth = cards[0].offsetWidth + 16; // width + gap
+let cardWidth = cards[0].offsetWidth + 16;
 
-// Clone first & last few cards for seamless looping
 cards.forEach(card => {
   const cloneFirst = card.cloneNode(true);
   const cloneLast = card.cloneNode(true);
@@ -18,7 +65,8 @@ cards.forEach(card => {
 let offset = -cardWidth * cards.length; 
 track.style.transform = `translateX(${offset}px)`;
 
-// Move carousel
+
+
 function moveCarousel(direction) {
   if (direction === 'next') {
     offset -= cardWidth;
@@ -106,4 +154,30 @@ prevBtn.addEventListener('click', () => moveCarousel('prev'));
     backToTopButton.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+  let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+    let speed = 0.1;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animate() {
+      let dx = mouseX - currentX;
+      let dy = mouseY - currentY;
+
+      currentX += dx * speed;
+      currentY += dy * speed;
+
+      let velocity = Math.sqrt(dx * dx + dy * dy) * 0.05;
+      let scale = Math.min(1.2, 1 + velocity * 0.02);
+
+      blob.style.transform = `translate(${currentX - 20}px, ${currentY - 20}px) scale(${scale})`;
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
   });

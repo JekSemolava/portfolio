@@ -7,14 +7,30 @@
     <title>@jasonsemolava. </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="./public/images/icons/favicon.ico.png">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/media.css">
   </head>
   
   <body>
-    <!-- Header -->
-    <section id="header" class="">
+    <div class="blob-cursor"></div>
+  
+    <section id="sidebar">
+      <div class="container">
+        <ul class="nav col-12 col-md-auto mb-2 mb-md-0 ms-auto">
+          <li><a href="#projects" class="nav-link px-2">Projects</a></li>
+          <li><a href="#features" class="nav-link px-2">Applications</a></li>
+          <li><a href="#footer" class="nav-link px-2">Contact</a></li>
+        </ul>
+        <button type="button" class="btn btn-outline-dark px-4" id="sb_closeButton">X</button>
+      </div>
+    </section>
+
+    <section id="header">
       <div class="container">
         <header class="d-flex flex-wrap justify-content-end justify-content-md-end py-3 mb-0 border-bottom">
           <div class="logo col-md-3 pt-2">
@@ -27,17 +43,13 @@
           <ul class="nav col-12 col-md-auto mb-2 mb-md-0 ms-auto">
             <li><a href="#projects" class="nav-link px-2 link-secondary">Projects</a></li>
             <li><a href="#features" class="nav-link px-2">Applications</a></li>
-            <!--<li><a href="#experience" class="nav-link px-2">Experience</a></li>-->
-            <li><a href="./public/RESUME_JASON_S.pdf" class="nav-link px-2" target="_blank" download="cv_jason_semolava">Resume</a></li>
+            <li><a href="#contact" class="nav-link px-2">Contact</a></li>
           </ul>
           <button type="button" class="btn btn-outline-dark px-4" id="logoutButton" onclick="logout()">Logout</button>
+          <button type="button" class="burger btn btn-outline-dark px-4" id="burgerButton">
+            <img src="./public/images/icons/burger.png" />
+          </button>
         </header>
-      </div>
-    </section>
-  
-    <section class="">
-      <div id="parallax">
-          <div class="cover py-0 my-0"></div>
       </div>
     </section>
 
@@ -107,8 +119,15 @@
       <div class="feature-projects g-3 pt-3 pb-5 col-12">
           
         <!-- Travel Blog -->
-        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
-            <div class="card shadow-sm">
+        <div class="flip-card col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
+
+          <div class="flip-card-inner">
+            <div class="flip-card-front d-flex align-items-center justify-content-center">
+              <h3>Travel Blog</h3>
+            </div>
+
+            <div class="flip-card-back">
+              <div class="card shadow-sm">
                 <figure><img src="./public/images/feature7.png" title="Travel Blog" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
@@ -120,12 +139,21 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
 
         <!--Travel Tracker-->
-        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
-            <div class="card shadow-sm">
+        <div class="flip-card col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
+
+          <div class="flip-card-inner">
+            <div class="flip-card-front d-flex align-items-center justify-content-center">
+              <h3>Travel Tracker</h3>
+            </div>
+            
+            <div class="flip-card-back">
+              <div class="card shadow-sm">
                 <figure><img src="./public/images/feature5.png" title="Travel Tracker" loading="lazy" alt="no preview image"></figure>
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
@@ -138,57 +166,83 @@
                     </div>
                 </div>
             </div>
+          </div>
+          </div>
         </div>
 
         <!--Task List-->
-        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
-            <div class="card shadow-sm">
-                <figure><img src="./public/images/feature6.png" title="Task List" loading="lazy" alt="no preview image"></figure>
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                        <button type="button" class="btn borderless my-0"><a href="./public/Features/Task List/index.html" target="_blank" rel="noopener">Take a Look</a></button>
-                        <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Task%20List" target="_blank" rel="noopener">
-                        <img src="./public/images/marquee/mar9.png">
-                        </a></figure></button>
-                        </div>
-                    </div>
-                </div>
+        <div class="flip-card col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
+          <div class="flip-card-inner">
+            <div class="flip-card-front d-flex align-items-center justify-content-center">
+              <h3>Task List</h3>
+            </div>
+
+            <div class="flip-card-back">
+              <div class="card shadow-sm">
+                  <figure><img src="./public/images/feature6.png" title="Task List" loading="lazy" alt="no preview image"></figure>
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                          <button type="button" class="btn borderless my-0"><a href="./public/Features/Task List/index.html" target="_blank" rel="noopener">Take a Look</a></button>
+                          <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Task%20List" target="_blank" rel="noopener">
+                          <img src="./public/images/marquee/mar9.png">
+                          </a></figure></button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
             </div>
         </div>
 
         <!--Employee Management Organizer Sheet-->
-        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
-            <div class="card shadow-sm">
-                <figure><img src="./public/images/feature3.png" title="Employee Management Organizer" loading="lazy" alt="no preview image"></figure>
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                        <button type="button" class="btn borderless my-0"><a href="./public/Features/Crud/index.html" target="_blank" rel="noopener">Take a Look</a></button>
-                        <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Crud" target="_blank" rel="noopener">
-                        <img src="./public/images/marquee/mar9.png">
-                        </a></figure></button>
-                        </div>
-                    </div>
-                </div>
+        <div class="flip-card col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
+          <div class="flip-card-inner">
+            <div class="flip-card-front d-flex align-items-center justify-content-center">
+              <h3>Employee Management</h3>
+            </div>
+
+            <div class="flip-card-back">
+              <div class="card shadow-sm">
+                  <figure><img src="./public/images/feature3.png" title="Employee Management Organizer" loading="lazy" alt="no preview image"></figure>
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                          <button type="button" class="btn borderless my-0"><a href="./public/Features/Crud/index.html" target="_blank" rel="noopener">Take a Look</a></button>
+                          <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Crud" target="_blank" rel="noopener">
+                          <img src="./public/images/marquee/mar9.png">
+                          </a></figure></button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
             </div>
         </div>
 
         <!--Testimonial/Review Page-->
-        <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
-          <div class="card shadow-sm">
-            <figure><img src="./public/images/feature4.png" title="Testimonial/Review Page" loading="lazy" alt="no preview image"></figure>
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn borderless my-0"><a href="./public/Features/Testimonial/index.html" target="_blank" rel="noopener">Take a Look</a></button>
-                    <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Testimonial" target="_blank" rel="noopener">
-                      <img src="./public/images/marquee/mar9.png">
-                    </a></figure></button>
+        <div class="flip-card col-12 col-sm-8 col-md-6 col-lg-8 col-xl-5 col-xxl-3 align-items-center pb-1">
+          <div class="flip-card-inner">
+            <div class="flip-card-front d-flex align-items-center justify-content-center">
+              <h3>Testimonial/Review Page</h3>
+            </div>
+
+            <div class="flip-card-back">
+              <div class="card shadow-sm">
+                <figure><img src="./public/images/feature4.png" title="Testimonial/Review Page" loading="lazy" alt="no preview image"></figure>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn borderless my-0"><a href="./public/Features/Testimonial/index.html" target="_blank" rel="noopener">Take a Look</a></button>
+                        <button type="button" class="btn borderless my-0"><figure><a href="https://github.com/JekSemolava/portfolio/tree/main/public/Features/Testimonial" target="_blank" rel="noopener">
+                          <img src="./public/images/marquee/mar9.png">
+                        </a></figure></button>
+                      </div>
                   </div>
+                </div>
               </div>
             </div>
-          </div>
+            </div>
         </div>
      
       </div>
@@ -457,6 +511,7 @@
       window.location.href = '/portfolio/login';
   }
 </script>
+<div id="overlay" aria-hidden="true"></div>
 </body>
 
 </html>
