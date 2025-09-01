@@ -26,7 +26,7 @@ function passwordCheck(req, res, next) {
 
 app.get("/", (req, res) => {
   userIsLoggedIn = false;
-  res.sendFile(__dirname + "/public/login.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.get("/login", (req, res) => {
