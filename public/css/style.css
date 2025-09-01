@@ -23,7 +23,7 @@
 a{text-decoration: none;color: white;}
 a:hover{color:black;}
 a:hover ~ .blob-cursor, button:hover ~ .blob-cursor {width: 60px;height: 60px;}
-.blob-cursor {position: fixed;top: 0;left: 0;width: 40px;height: 40px;background: radial-gradient(circle at center, #BF2E43AD, #4E9BB00A);border-radius: 50%;pointer-events: none;transform: translate(-50%, -50%);transition: width 0.1s ease, height 0.2s ease;mix-blend-mode: difference;will-change: transform;}
+.blob-cursor {position: fixed;top: 0;left: 0;width: 40px;height: 40px;background: radial-gradient(circle at center, #361D55AD, #4E9BB00A);border-radius: 50%;pointer-events: none;transform: translate(-50%, -50%);transition: width 0.1s ease, height 0.2s ease;mix-blend-mode: difference;will-change: transform;}
 button:hover{background-color: #d0c5c5;}
 mark{background-color:transparent;}
 html {scroll-behavior: smooth;}
@@ -268,7 +268,7 @@ body.no-scroll { overflow: hidden; }
 #skills .row .col .card-body button{}
 
 /* Footer */
-#footer{display: block;margin: 0 auto;width: 100%;color: var(--bs-black); background-color: #e2dfd7fc;}
+#footer{display: block;margin: 0 auto;width: 100%;color: var(--bs-black); background-color: #b5bcc5;}
 #footer h2 {font-size: 1rem; display: flex;   justify-content: space-between;   gap: 1rem;   line-height: 3; margin:auto 0;}
 #footer h3 {text-align:left; font-weight:600;text-transform: uppercase;margin-bottom: 6px;position: relative;font-family: "Poppins";font-size: .909rem;color:var(--bs-black);}
 

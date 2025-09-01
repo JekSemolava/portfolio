@@ -71,6 +71,7 @@
   
 
 @media only screen and (max-width: 576px) {
+    body{cursor:pointer;}
     header figure{display:none;}
     #footer h3 {text-align:left;}
     .card-body .btn-group button {font-size: 14px;}
@@ -79,6 +80,7 @@
     .feature-projects {max-width: 75%;}
     .row {width: 90%;margin: auto;}
     .references figure {right: 5rem;background-color:transparent;}
+    .blob-cursor{display:none;}
 }
 @media only screen and (max-width: 400px) {
     #login .cover{background: none;}
