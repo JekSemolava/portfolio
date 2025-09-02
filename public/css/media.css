@@ -2,6 +2,7 @@
 @media only screen and (max-width: 1400px) {
   #login form {padding: 25vh 1.5vw;}
 }
+
 @media only screen and (max-width: 1200px) {
   .align-items-center{max-width:325px;}
   #skills .container .row .col .card .card-body {min-height: 250px;}
@@ -10,89 +11,80 @@
   .feature-projects{gap:1.25rem;}
   .feature-projects{  max-width: unset;}
 }
+
 @media only screen and (max-width: 1100px) {
   .feature-projects .shadow-sm {min-height: unset;}
-  /*.rounded-circle {max-width: 200px;height: auto;max-height: unset;display: block;margin: 0 auto;position: static;}*/
 }
+
 @media only screen and (max-width: 1090px) {
-    .logo{top:1vh;}
-    .card-body button {position: absolute;display:block; bottom: 0; max-width: unset;left:0}
-    .card-body .btn-group {width:130px;background-color: #539bcb;}
-    .card-body .btn.btn-sm.btn-dark.my-4 {   background-color: transparent;   border-color: transparent; margin: 1.25rem 0 !important;}
-    .card-body .btn.btn-sm.btn-dark.my-4 a:hover {color: #000;}
-    .card-body .btn.borderless.my-4 {   margin: 0 !important; }
-    .card-body .btn.borderless.my-4 img:hover { filter: invert(100);}
-    .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
-    #features h2 {padding-left: 0;text-align: center;}
-    .btn-group > button:nth-child(2) {display: none;}
-  }
+  .logo{top:1vh;}
+  .card-body button {position: absolute;display:block; bottom: 0; max-width: unset;left:0}
+  .card-body .btn-group {width:130px;background-color: #539bcb;}
+  .card-body .btn.btn-sm.btn-dark.my-4 {   background-color: transparent;   border-color: transparent; margin: 1.25rem 0 !important;}
+  .card-body .btn.btn-sm.btn-dark.my-4 a:hover {color: #000;}
+  .card-body .btn.borderless.my-4 {   margin: 0 !important; }
+  .card-body .btn.borderless.my-4 img:hover { filter: invert(100);}
+  .btn-group {position: unset;display: flex;flex-wrap: wrap;justify-content: space-evenly;width: 100%;gap: .25rem;}
+  #features h2 {padding-left: 0;text-align: center;}
+  .btn-group > button:nth-child(2) {display: none;}
+}
+
 @media only screen and (max-width: 1000px) {
-    .align-items-center{max-width:100%;}
-    .carousel-control-next, .carousel-control-prev {width: 10%;height: 20%;}
-    .feature-projects {display: grid;grid-template-columns: repeat(2, 1fr);gap: 1.25rem;justify-content: center;}
-    .feature-projects .shadow-sm {max-width: 100%;}
-    .col-md-6 {flex: 0 0 auto;width: unset;}
-    .carousel-card {min-width: 40%;}
-  }
+  .align-items-center{max-width:100%;}
+  .carousel-control-next, .carousel-control-prev {width: 10%;height: 20%;}
+  .feature-projects {display: grid;grid-template-columns: repeat(2, 1fr);gap: 1.25rem;justify-content: center;}
+  .feature-projects .shadow-sm {max-width: 100%;}
+  .col-md-6 {flex: 0 0 auto;width: unset;}
+  .carousel-card {min-width: 40%;}
+}
+
 @media only screen and (max-width: 992px) {
-    .row.align-items-center{text-align: center;}
-    
-  }
+  .row.align-items-center{text-align: center;}
+}
+
 @media only screen and (max-width: 800px) {
-    #header .nav {display: none;}
-    button.burger{display:block;}
-    #burgerButton{display:block;}
-    #logoutButton{display:none;}
-    #footer h3 {text-align:center;}
-
-    #sb_closeButton {width:70px; height:45px;}
-    button.burger img {max-width: 27px;}
+  #header .nav {display: none;}
+  button.burger{display:block;}
+  #burgerButton{display:block;}
+  #logoutButton{display:none;}
+  #footer h3 {text-align:center;}
+  #sb_closeButton {width: 55px;height: 40px;}
+  button.burger img {max-width: 27px;}
+  .carousel-card {min-width: 70%;}
+  .feature-projects img {transform: scale(1.25);}
+  .feature-projects {grid-template-columns: 1fr; display: block;max-width: 70%;margin: auto;}
+  .feature-projects > div {margin-bottom: 5vh;}
+  #login .container{display:block;}
+}
   
-   
-    .carousel-card {min-width: 70%;}
-    .feature-projects img {transform: scale(1.25);}
-    .feature-projects {grid-template-columns: 1fr; display: block;max-width: 70%;margin: auto;}
-    .feature-projects > div {margin-bottom: 5vh;}
-
-    #login .container{display:block;}
-    
-    
-  }
 @media only screen and (max-width: 768px) {
-    #skills .container .row .col .card .card-body {min-height: 200px;}
-    .login-logo img {
-    position: absolute;
-    max-width: 250px;
-    z-index: 100;
-    left: 3vw;
-    margin: auto;
-    display: block;}
-  }
-  
+  #skills .container .row .col .card .card-body {min-height: 200px;}
+  .login-logo img {position: absolute;max-width: 250px;z-index: 100;left: 3vw;margin: auto;display: block;}
+  .flip-card-inner {width: 100%; max-width:255px;}
+}
 
 @media only screen and (max-width: 576px) {
-    body{cursor:pointer;}
-    header figure{display:none;}
-    #footer h3 {text-align:left;}
-    .card-body .btn-group button {font-size: 14px;}
-    
-    .carousel-card {min-width: 85%;}
-    .feature-projects {max-width: 75%;}
-    .row {width: 90%;margin: auto;}
-    .references figure {right: 5rem;background-color:transparent;}
-    .blob-cursor{display:none;}
+  body{cursor:pointer;}
+  header figure{display:none;}
+  #footer h3 {text-align:left;}
+  .card-body .btn-group button {font-size: 14px;}    
+  .carousel-card {min-width: 85%;}
+  .feature-projects {max-width: 75%;}
+  .row {width: 90%;margin: auto;}
+  .references figure {right: 5rem;background-color:transparent;}
+  .blob-cursor{display:none;}
 }
+
 @media only screen and (max-width: 400px) {
-    #login .cover{background: none;}
-    #login form{padding:35vh 1rem;background-color: rgba(50, 50, 50,.2);}
-    #login object {display:none;}
-    .carousel-card {min-width: 90%;}
-    .svg-avatar{aspect-ratio:1;max-width: 300px;}
-  }
+  #login .cover{background: none;}
+  #login form{padding:35vh 1rem;background-color: rgba(50, 50, 50,.2);}
+  #login object {display:none;}
+  .carousel-card {min-width: 90%;}
+  .svg-avatar{aspect-ratio:1;max-width: 300px;}
+}
 
-  @media only screen and (max-width: 400px) {
-  .references figure {right: 3rem;}
-
-  }
+@media only screen and (max-width: 400px) {
+.references figure {right: 3rem;}
+}
 
 
