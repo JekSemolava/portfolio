@@ -28,6 +28,10 @@ button:hover{background-color: #d0c5c5;}
 mark{background-color:transparent;}
 html {scroll-behavior: smooth;}
 body{position:relative;font-family:"Poppins";cursor: none;}
+body.no-scroll { overflow: hidden; }
+.hidden {display: none !important;}
+.pt-5 {padding-top: 5.125rem !important;}
+.display-5 {font-size: calc(1.25rem + 2.1vw);}
 
 /* ROOT */
 :root{
@@ -42,23 +46,11 @@ body{position:relative;font-family:"Poppins";cursor: none;}
 .tags-slide-content li {flex: 0 0 auto;list-style: none;transition: transform 0.3s ease-in-out;}
 .tags-slide-content li figure:hover {transform: scale(1.25);cursor:pointer;}
 .tags-container:hover .tags-slide-content {animation-play-state: paused;}
-.tags-slide-content li figure {
-  width: 80px;
-  height: 80px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: white;
-  font-size: 1.2rem;}
-
+.tags-slide-content li figure {width: 80px;height: 80px;background: transparent;display: flex;align-items: center;justify-content: center;font-weight: bold;color: white;font-size: 1.2rem;}
 .tags-container::before, .tags-container::after {content: "";position: absolute;height: 100%;width: 4rem;z-index: 2;} */
 .tags-container::before {top:0;left: 0;background: linear-gradient(to left, transparent, #69d3df, #94ddba);background-size: 180% 180%;animation: gradient-animation 40s ease infinite;height: auto;width: auto;overflow: visible;position: relative;opacity:0.4;}
 .tags-container::after {top:0;right: 0;background: linear-gradient(to right, transparent);}
 .tags-slide-content li figure img {width: 100%;}
-
-
 
 
 .container, .container-lg, .container-md, .container-sm {max-width: 1400px;position:relative;}
@@ -72,7 +64,6 @@ body{position:relative;font-family:"Poppins";cursor: none;}
 #login .cover{position: relative;width: 100%;  max-width: 1400px;margin:auto;display:block;}
 .login-logo figure {position: relative;top:5vh;}
 .login-logo img {position: absolute;max-width: 225px;z-index: 100;left: 2vw;}
-
 #login form { z-index: 50; height: 100vh; width: 100%; max-width: 300px; opacity: 0.8; background-color: #c0afaf61; padding: 25vh 1rem; }
 #login form input { margin-bottom: 1rem; margin-top: .25rem; width: 90%; text-align: center; padding: 6px; border-radius: 8px; border: 1px solid #cccc; }
 #login object {margin:auto;    background-color: #b0bd7a;}
@@ -89,109 +80,31 @@ header button{margin-left: 1.25rem;}
 .gradient-background {background: linear-gradient(300deg, #69d3df, #94ddba, #0a66c2);background-size: 180% 180%;animation: gradient-animation 18s ease infinite;height: auto;width: auto;overflow: visible;position: relative;opacity:0.8;}
 button.burger{display:none;}
 button.burger img{width: 100%;max-width: 40px;}
-
 #burgerButton{display:none;}
-
 #burgerButton:hover img {filter: invert(100);}
 
-.pt-5 {padding-top: 5.125rem !important;}
-.display-5 {font-size: calc(1.25rem + 2.1vw);}
 .icon-square {width: 3rem;height: 3rem;border-radius: 0.75rem;}
 .profile-img {height: 100px;border-radius: 50%;}
 .btn.btn-outline-light.px-4 {background-color: #727D73;}
 
 #textAnimation {border-color: transparent;background-color: transparent;height: auto;   min-height: 15vh;   width: 100%;   overflow: hidden;   max-width: 1000px;   text-align: center;   margin: auto;}
 #introduction {height: auto;width: 100%;min-height: 25vh;margin: auto;}
-/*#introduction object {object-fit: cover;object-position: 100% -5%; margin:auto;}*/
   .svg-avatar{flex: 0 0 auto;width: 100%; border-radius: 500px; overflow: hidden; background-color: #b7e8b84a; max-width: 400px; padding:0px; border: 2px solid #000; aspect-ratio: 2;}
 
 
 /* Sidebar */
-/*#sidebar {display: block;position: sticky;top:2vh ;z-index: 1000;}
-#sb_closeButton:hover {background-color: #000;}
-#sb_closeButton {position: absolute;float: right;right: 1rem;z-index: 9999;}
-#sidebar ul{width: 40%;float: right;height: 100vh;position: absolute;right: 0;background-color: #aeaca7;z-index: 999;display: block;text-align: center;margin-top: 5vh;}
-#sidebar ul li a{color:var(--bs-white);}
-#sidebar ul li a:hover{color:var(--bs-black);}
-#sidebar ul li {display: block;line-height: 3;margin-bottom: 10px;font-family: Poppins;font-size: 20px;}*/
-#sidebar {
-  position: fixed;   /* fixed for overlay effect */
-  top: 0;
-  right: -100%;      /* hide off-screen */
-  width: 40%;
-  height: 100vh;
-  background-color: var(--bs-black);
-  z-index: 9999;
-  transition: right 0.3s ease-in-out;
-}
-
-/* Show sidebar */
-#sidebar.active {
-  right: 0;
-}
-
-#sb_closeButton {
-  position: absolute;
-  background-color: var(--bs-white);
-  top: 1rem;
-  right: 1rem;
-  z-index: 1001;
-  width: 90px;
-  height: 54px;
-}
-#sb_closeButton:hover {
-  background-color: #4fcbdf;;
-  color: #000;
-}
-
-#sidebar ul {
-  position:absolute;
-  display:block;
-  margin-top: 7vh;
-  list-style: none;
-  padding: 0;
-}
-
-#sidebar ul li {
-  line-height: 3;
-  margin-bottom: 10px;
-  font-family: "Poppins";
-  font-size: 20px;
-  text-align: center;
-}
-#sidebar ul li a {
-  color: var(--bs-white);
-  text-decoration: none;
-}
-#sidebar ul li a:hover {
-  color: #f2eeaa;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* Overlay just beneath the sidebar, above the page */
-#overlay{
-  position: fixed;
-  inset: 0;                      /* shorthand for top:0; right:0; bottom:0; left:0 */
-  background: rgba(142, 128, 128, 0.35);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);    /* blur behind (Safari/Chromium) */
-  z-index: 9998;
-
-  opacity: 0;
-  pointer-events: none;          /* don't block clicks when hidden */
-  transition: opacity .25s ease;
-}
-
-#overlay.active{
-  opacity: 1;
-  pointer-events: auto;          /* block clicks when visible */
-}
-
-/* Optional: prevent background scroll when sidebar is open */
-body.no-scroll { overflow: hidden; }
+#sidebar {position: fixed;top: 0;right: -100%;width: 40%;height: 100vh;background-color: var(--bs-black);z-index: 9999;transition: right 0.3s ease-in-out;}
+#sidebar.active {right: 0;}
+#sb_closeButton {position: absolute;background-color: var(--bs-white);top: 1rem;right: 1rem;z-index: 1001;width: 90px;height: 54px;}
+#sb_closeButton:hover {background-color: #4fcbdf;;color: #000;}
+#sidebar ul {position:absolute;display:block;margin-top: 13vh;list-style: none;padding: 0;}
+#sidebar ul li {line-height: 2;margin-bottom: 10px;font-family: "Poppins";font-size: 20px;text-align: center;}
+#sidebar ul li a {color: var(--bs-white);text-decoration: none;}
+#sidebar ul li a:hover {color: #f2eeaa;}
+#sideBarlogout{position: absolute;background-color: #23f4f2;top: 22rem;right: 1rem;z-index: 1001;width: 90px;height: 54px;}
+#sideBarlogout:hover {background-color: #178e92;color: #000;}
+#overlay{position: fixed;inset: 0;background: rgba(142, 128, 128, 0.35);-webkit-backdrop-filter: blur(6px);backdrop-filter: blur(6px);z-index: 9998;opacity: 0;pointer-events: none;transition: opacity .25s ease;}
+#overlay.active{opacity: 1;pointer-events: auto;}
 
 /* PROJECTS */
 #projects{color:#fff;}
@@ -216,7 +129,7 @@ body.no-scroll { overflow: hidden; }
 .socmed-icons.list-unstyled img {width: 100%;max-width: 55px;height: auto;margin: auto 0;height: auto;min-height: 50px;max-height:50px;border-radius: 25px;border: 1px solid var(--bs-black);}
 
 /* FEATURES */
-#features{display: block;margin:0 auto;/*background-color: #f2f2f2;*/}
+#features{display: block;margin:0 auto;}
 #features h2 {padding-left: unset;}
 #writeup .text {width: 100%;padding: 8px;min-height: 175px;}
 #writeup .text span{display:block; font-size:1rem;}
@@ -233,7 +146,6 @@ body.no-scroll { overflow: hidden; }
 .feature-projects .shadow-sm {display:flex; overflow: hidden;width: 100%;height: auto;min-height: unset;}
 .feature-projects .shadow-sm mark a{color:#fc5069;}
 .feature-projects .shadow-sm a{color: var(--bs-black);filter: invert(100%);}
-/*.feature-projects > * {box-shadow: 8px 20px 25px rgba(0, 0, 0, 0.3);}*/
 .card.shadow-sm figure {width: 100%;height: auto;max-height: 160px;overflow: hidden;}
 .btn-group {position: absolute;bottom: 1rem;display:block;}
 
@@ -265,7 +177,6 @@ body.no-scroll { overflow: hidden; }
 /* Skills */
 #skills .text{width:100%;}
 #skills .row .col .card-body{width:100%; height:auto; min-height:260px;position:relative;}
-#skills .row .col .card-body button{}
 
 /* Footer */
 #footer{display: block;margin: 0 auto;width: 100%;color: var(--bs-black); background-color: #b5bcc5;}
