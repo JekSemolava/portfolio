@@ -56,7 +56,6 @@ app.post("/check", (req, res) => {
     header.style.display = "none";
   });
 
-  // Close sidebar → restore burger + header + hide overlay
   closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
@@ -64,7 +63,6 @@ app.post("/check", (req, res) => {
     header.style.display = "block";
   });
 
-  // Close if clicking overlay
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
