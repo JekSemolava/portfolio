@@ -27,7 +27,7 @@ a:hover ~ .blob-cursor, button:hover ~ .blob-cursor {width: 60px;height: 60px;}
 button:hover{background-color: #d0c5c5;}
 mark{background-color:transparent;}
 html {scroll-behavior: smooth;}
-body{position:relative;font-family:"Poppins";cursor: none;}
+body{position:relative;font-family:"Poppins";cursor: none;background-image: url("https://transparenttextures.com/patterns/az-subtle.png");}
 body.no-scroll { overflow: hidden; }
 .hidden {display: none !important;}
 .pt-5 {padding-top: 5.125rem !important;}
