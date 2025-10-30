@@ -153,6 +153,18 @@ button.burger img{width: 100%;max-width: 40px;}
 #features .card-body .btn-group button:nth-child(1):hover a{font-style:italic; font-weight:700; font-size:15px;color:#0d6efd;}
 #features .card-body .btn-group button:nth-child(2):hover {background-color: black;filter: invert(100);}
 .feature-projects {display: flex;gap: 3rem;overflow: auto; touch-action: pan-x;scrollbar-color: #6c6666 #d3f6f785;scrollbar-width: thin;cursor:grab;}
+#features_nodejs {position: relative;max-width: 1400px;background-color: #fff;box-shadow: 2px 2px 8px #ccc;}
+.feature_nodejs_projects {display: flex;gap: 3rem;cursor:pointer;margin:auto;}
+.nodejs_info {text-align: center;margin:0;width: 100%;max-width: 500px;position: relative;}
+.nodejs_feature1 figure{position:relative;max-width: 600px;margin: auto;}
+.nodejs_feature1 img {width: 100%;max-width: 600px;border-radius: 10px;box-shadow: 2px 2px 10px #ccc;}
+img.tag_nodejs {position: absolute;right: 0;width: 100px;bottom: 0;z-index: 2;}
+img.tag_github {position: absolute;right: 0;width: 50px;bottom: 39px;z-index: 3;border-radius: 35px;border: 2px solid #fff;filter: invert(1);}
+.nodejs_info ul {background-color: rgb(0, 0, 0);text-align: left;padding: 0 0 5px 2px;color: #fff;font-size: 15px;border-radius: 5px;}
+.nodejs_info ul li:first-child {background-color: #484646;}
+.nodejs_info ul:hover{box-shadow: 2px 15px 13px #4875bdbd;}
+.tag_github:hover {background-color: #d3ba3399;scale: 1.125;}
+
 .feature-projects img {width: 100%;height: auto;transform: scale(1.5); transform-origin: top center;}
 .feature-projects .shadow-sm {display:flex; overflow: hidden;width: 100%;height: auto;min-height: unset;}
 .feature-projects .shadow-sm mark a{color:#fc5069;}
@@ -212,3 +224,42 @@ footer .col .phone ul li{pointer-events:none;}
 #header .btn-group figure img:hover{filter:invert(0);box-shadow: 6px 6px 10px #75c3e8;}
 #parallax {content: "";position: fixed;width: 100%;z-index: -1;}
 #parallax .cover {width: 100%;height: 100vh;background: none;}
+
+#experience div.author_container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  max-width: 500px;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.certificate {
+  width: 100%;
+  margin: 4rem 0;
+  max-width: 185px;
+  position: absolute;
+  right: 0;
+  display: block;
+}
+
+.nodejs {
+  width: 100%;
+  margin: 0;
+  max-width: 65px;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  right: 0;
+  z-index: 2;
+}
+
+#features_nodejs h3 {
+  padding-right: unset;
+}
+
+#features_nodejs .flip-card {
+  position: relative;
+}
