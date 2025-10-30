@@ -10,6 +10,8 @@
   .feature-projects .shadow-sm {max-width: 450px;}
   .feature-projects{gap:1.25rem;}
   .feature-projects{  max-width: unset;}
+  .feature_nodejs_projects {display: block;text-align:center;}
+  .nodejs_info{margin:auto;}
 }
 
 @media only screen and (max-width: 1100px) {
@@ -42,6 +44,11 @@
   .row.align-items-center{text-align: center;}
 }
 
+@media only screen and (max-width: 900px) {
+#experience div.author_container {display:block;}
+.certificate{max-width: unset;position: static;margin: .5rem;}
+}
+
 @media only screen and (max-width: 800px) {
   #header .nav {display: none;}
   button.burger{display:block;}
@@ -54,7 +61,10 @@
   .feature-projects img {transform: scale(1.25);}
   .feature-projects {grid-template-columns: 1fr; display: block;max-width: 70%;margin: auto;}
   .feature-projects > div {margin-bottom: 5vh;}
+  .feature_nodejs_projects {display: block;}
   #login .container{display:block;}
+  .nodejs_info {margin-top: 3rem;}
+  
 }
   
 @media only screen and (max-width: 768px) {
@@ -73,6 +83,8 @@
   .row {width: 90%;margin: auto;}
   .references figure {right: 5rem;background-color:transparent;}
   .blob-cursor{display:none;}
+  .certificate{margin:0}
+  .nodejs_info ul {font-size:13px;}
 }
 
 @media only screen and (max-width: 400px) {
@@ -81,10 +93,10 @@
   #login object {display:none;}
   .carousel-card {min-width: 90%;}
   .svg-avatar{aspect-ratio:1;max-width: 300px;}
+  .references figure {right: 3rem;}
+  .certificate img {width: 100%;height: auto;}
+  .certificate img:hover{scale: 1.125;}
 }
 
-@media only screen and (max-width: 400px) {
-.references figure {right: 3rem;}
-}
 
 
