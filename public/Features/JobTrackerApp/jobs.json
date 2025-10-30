@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1761018690693,
+    "company": "Company1",
+    "position": "Junior Software Engineer",
+    "status": "Applied",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Node.js",
+      "remote"
+    ]
+  },
+  {
+    "id": 1761018945475,
+    "company": "Company2",
+    "position": "Frontend Web Developer",
+    "status": "Applied",
+    "tags": [
+      "HTMl",
+      "CSS",
+      "Javascript",
+      "React",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": 1761018995267,
+    "company": "Company3",
+    "position": "Frontend Web Developer",
+    "status": "Applied",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Vue.js",
+      "remote"
+    ]
+  },
+  {
+    "id": 1761019991816,
+    "company": "Company4",
+    "position": "FullStack Developer",
+    "status": "Applied",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Express",
+      "MySQL",
+      "Django",
+      "Ruby"
+    ]
+  }
+]
