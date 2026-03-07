@@ -1,0 +1,9 @@
+#download all necessary modules first
+#on root directory
+npm -i
+
+#on cmd, locate this folder
+#ie., cd User\Desktop\JobTrackerApp
+
+#to run, enter this code
+node server.js
