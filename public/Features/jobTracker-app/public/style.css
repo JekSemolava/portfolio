@@ -1,0 +1,30 @@
+body {text-align: center;font-family: Poppins, sans-serif;padding: 2em;background: #f5f5f5;background-image: url("https://transparenttextures.com/patterns/az-subtle.png");height: 10vh;overflow: scroll;}
+h1 { color: #333; }
+input, textarea, select {font-family: Poppins, sans-serif;font-size: 16px;border: none;border-radius:10px; padding: 0.5em;margin: 0.5em auto;display: block;text-align: left;width: 100%;max-width: 350px;}
+button {display: block;text-align: center;margin: auto;padding: .25em .75em;cursor: pointer;font-family: Poppins, sans-serif;border: none;border-radius: 4px;background: #4caf50;color: white;}
+ul { list-style: none; padding: 0; }
+li {position: relative;margin: 0.5em auto;padding: 1em .5em .5em;border-radius: 5px;width: 100%;max-width: 350px;}
+button.delete {background: crimson;color: white;border: none;border-radius: 15px;width: 27px;height: 27px;position: absolute;top:0px;right: 0px;cursor: pointer;}
+.jobContainer {display: block;margin: auto;width: 100%;max-width: 425px;border: 1px solid #a8a4a4;border-radius: 8px;background: rgba(255,255,255,0.85);padding-bottom: 1em;}
+#jobList {display: inline-flex;gap: 1rem;padding: 0;list-style: none;}
+#jobList li {display: block;margin: 1em auto;padding: 15px 8px 8px;background: #fff;border-radius: 6px;box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-height: 220px; overflow: auto;text-align: left;width: 100%;max-width: 200px;}
+.jobHeader {display: flex;justify-content: space-between;align-items: center;margin-bottom: 0.5em;}
+.jobHeader strong {font-size: 18px;color: #333;}
+.jobBody {font-size: 14px;color: #555;}
+.status {margin-top: 0.5em;}
+.status label {font-weight: 600;margin-right: 0.5em;}
+.status select {padding: 4px 8px;border-radius: 4px;border: 1px solid #ccc;}
+.tags {margin-top: 0.5em;}
+.tag {display: inline-block;background: #e3e3e3;border-radius: 12px;padding: 3px 8px;margin: 2px;font-size: 12px;}
+button:hover {opacity: 0.9;}
+input:focus, textarea:focus, select:focus {outline: none;box-shadow: 0 0 3px #888;}
+
+/* === STATUS COLOR TAGS === */
+.statusSelect {border-radius: 6px;padding: 4px 8px;border: 1px solid #ccc;font-weight: 500;transition: background 0.3s, color 0.3s;}
+/* Default */
+.statusSelect[value="Applied"] {background: #e3f2fd;color: #1565c0;border-color: #64b5f6;}
+.statusSelect[value="Interviewing"] {background: #fff3e0;color: #ef6c00;border-color: #ffb74d;}
+.statusSelect[value="Offer"] {background: #e8f5e9;color: #2e7d32;border-color: #81c784;}
+.statusSelect[value="Rejected"] {background: #ffebee;color: #c62828;border-color: #ef9a9a;}
+.tag {display: inline-block;background: #e0e0e0;border-radius: 12px;padding: 3px 8px;margin: 2px;font-size: 12px;color: #333;transition: background 0.3s;}
+.tag:hover {background: #ccc;}

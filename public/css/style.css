@@ -27,7 +27,7 @@ a:hover ~ .blob-cursor, button:hover ~ .blob-cursor {width: 60px;height: 60px;}
 button:hover{background-color: #d0c5c5;}
 mark{background-color:transparent;}
 html {scroll-behavior: smooth;}
-body{position:relative;font-family:"Poppins";cursor: none;background-image: url("https://transparenttextures.com/patterns/az-subtle.png");}
+body{position:relative;font-family:"Poppins";cursor: none;/*background-image: url("https://transparenttextures.com/patterns/az-subtle.png");*/}
 body.no-scroll { overflow: hidden; }
 .hidden {display: none !important;}
 .pt-5 {padding-top: 5.125rem !important;}
@@ -203,8 +203,8 @@ img.tag_github {position: absolute;right: 0;width: 50px;bottom: 39px;z-index: 3;
 #skills .row .col .card-body{width:100%; height:auto; min-height:260px;position:relative;}
 
 /* Footer */
-#footer{background-image: url("../images/liquid-cheese.png")}
-#footer{display: block;margin: 0 auto;width: 100%;color: var(--bs-black); background-color: #b5bcc5;}
+/*#footer{background-image: url("../images/liquid-cheese.png")}*/
+#footer{display: block;margin: auto;width: 100%;color: var(--bs-black); background-color: #b5bcc5;}
 #footer h2 {font-size: 1rem; display: flex;   justify-content: space-between;   gap: 1rem;   line-height: 3; margin:auto 0;}
 #footer h3 {text-align:left; font-weight:600;text-transform: uppercase;margin-bottom: 6px;position: relative;font-family: "Poppins";font-size: .909rem;color:var(--bs-black);}
 
@@ -220,7 +220,7 @@ footer .col .phone ul li{pointer-events:none;}
 .phone ul li mark{background-color:transparent;}
 
 
-#header .btn-group figure img {width: 100%;display: block;max-width: 200px;padding:0 20px; background-image: url("../images/banner_images/Blue_Abstract_Crayons.png");background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 20px;filter: invert(100);box-shadow: 2px 6px 10px #eee8e8;}
+#header .btn-group figure img {width: 100%;display: block;max-width: 200px;padding:0 20px; /*background-image: url("../images/banner_images/Blue_Abstract_Crayons.png");*/background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 20px;/*filter: invert(100);box-shadow: 2px 6px 10px #eee8e8;*/}
 #header .btn-group figure img:hover{filter:invert(0);box-shadow: 6px 6px 10px #75c3e8;}
 #parallax {content: "";position: fixed;width: 100%;z-index: -1;}
 #parallax .cover {width: 100%;height: 100vh;background: none;}
